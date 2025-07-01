@@ -3,7 +3,7 @@ import { Star } from 'lucide-react'; // using lucide icon
 
 function UserCard({ name, address, postTime, img }) {
   return (
-    <div className="flex items-center w-[88%] rounded-2xl px-10 h-full gap-4 p-4 border-b border-black/30 shadow-sm bg-gray-50 mb-4">
+    <div className="flex items-center md:w-[88%] w-screen md:px-10 px-5 h-full gap-4 md:p-4  border-b border-black/30 shadow-sm bg-gray-50 mb-4">
       {/* Profile image with blue dot */}
       <div className="relative w-16 h-16">
         <img

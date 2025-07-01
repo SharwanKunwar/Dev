@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function Blog01() {
   return (
     <motion.section
-      className="max-w-4xl mx-auto p-6 bg-gray-50 text-gray-800 rounded-xl shadow-md space-y-6"
+      className="max-w-4xl mx-auto p-6 bg-gray-50 text-gray-800 rounded-b-xl shadow-md space-y-6"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
