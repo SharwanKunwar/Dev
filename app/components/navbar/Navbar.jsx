@@ -1,78 +1,72 @@
-'use client'
+'use client';
 
-import React, { useRef, useState } from 'react'
-import Image from 'next/image'
-import { Container } from '../Container'
-import Link from 'next/link'
+import React, { useRef, useState } from 'react';
+import Image from 'next/image';
+import { Container } from '../Container';
+import Link from 'next/link';
 import { motion, useMotionValueEvent, useScroll } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 
-function Navbar() {
-  
-  const [hovered, setHovered] = useState(null)
-  const [hoverRect, setHoverRect] = useState({ width: 0, left: 0 })
+export default function Navbar() {
+  const [hovered, setHovered] = useState(null);
+  const [hoverRect, setHoverRect] = useState({ width: 0, left: 0 });
   const navRefs = useRef([]);
-  const [scrolled, setscrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const {scrollY} = useScroll();
-  useMotionValueEvent(scrollY, 'change', (latest) =>{
-    if(latest > 20){
-      setscrolled(true);
-    }else{
-      setscrolled(false);
-    }
-  })
-
-
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    setScrolled(latest > 20);
+  });
 
   const navItems = [
-    { title: 'About', url: '/' },
-    { title: 'Projects', url: '/' },
-    { title: 'Community', url: '/community' },
-    { title: 'Contact', url: '/contact' },
-    { title: 'Blog', url: '/blog' },
-  ]
+    { title: 'About', url: '/', hash: '/', type: 'anchor' },
+    { title: 'Projects', url: '/', hash: '#projects', type: 'anchor' },
+    { title: 'Contact', url: '/', hash: '#contact', type: 'anchor' },
+    { title: 'Community', url: '/community', type: 'route' },
+    { title: 'Blog', url: '/blog', type: 'route' },
+  ];
 
   const handleMouseEnter = (index) => {
-    const rect = navRefs.current[index].getBoundingClientRect()
-    setHoverRect({ width: rect.width, left: navRefs.current[index].offsetLeft })
-    setHovered(index)
-  }
+    const rect = navRefs.current[index].getBoundingClientRect();
+    setHoverRect({ width: rect.width, left: navRefs.current[index].offsetLeft });
+    setHovered(index);
+  };
 
   return (
-    <Container className={'flex justify-center'}>
-      <motion.nav 
-      animate={{
-        boxShadow: scrolled ? '0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02), 0px 0px 0px 1px rgba(25, 28, 33, 0.08)' : 'none',
-        width: scrolled ? '50%' : '100%',
-        y: scrolled ? 10 : 0,
-      }}
-      transition={{duration:0.3,ease:"linear"}}
+    <Container className="flex justify-center">
+      <motion.nav
+        animate={{
+          boxShadow: scrolled
+            ? '0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02), 0px 0px 0px 1px rgba(25, 28, 33, 0.08)'
+            : 'none',
+          width: scrolled ? '50%' : '100%',
+          y: scrolled ? 10 : 0,
+        }}
+        transition={{ duration: 0.3, ease: 'linear' }}
+        className="fixed md:inset-x-0 top-0 z-50 md:max-w-5xl md:mx-auto flex items-center rounded-full justify-between px-3 py-2 border border-black/1 bg-white/30 backdrop-blur-2xl dark:bg-neutral-900"
+      >
+        <a href="/">
+          <Image
+            className="h-12 w-12 rounded-full bg-blue-200 p-1 object-cover"
+            src="/coder.png"
+            alt="Logo"
+            width={100}
+            height={100}
+          />
+        </a>
 
-      className="fixed md:inset-x-0 top-0 z-50 md:max-w-5xl md:mx-auto flex items-center rounded-full justify-between px-3 py-2 border border-black/1 bg-white/30 backdrop-blur-2xl dark:bg-neutral-900">
-        <Image
-          className="h-12 w-12 rounded-full bg-blue-200 p-1 object-cover"
-          src="/coder.png"
-          alt="Logo"
-          width={100}
-          height={100}
-        />
-
-        <div className='md:hidden'>
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
           {open ? (
-          <X onClick={() => setOpen(false)} className="w-9 h-9 cursor-pointer mr-2" />
+            <X onClick={() => setOpen(false)} className="w-9 h-9 cursor-pointer mr-2" />
           ) : (
-          <Menu onClick={() => setOpen(true)} className="w-9 h-9 cursor-pointer mr-2" />
+            <Menu onClick={() => setOpen(true)} className="w-9 h-9 cursor-pointer mr-2" />
           )}
         </div>
-        
 
-        <div
-          className="relative md:flex space-x-6 hidden"
-          onMouseLeave={() => setHovered(null)}
-        >
-          {/* Smooth hover background */}
+        {/* Desktop Nav */}
+        <div className="relative md:flex space-x-6 hidden" onMouseLeave={() => setHovered(null)}>
           {hovered !== null && (
             <motion.div
               layout
@@ -86,22 +80,58 @@ function Navbar() {
             />
           )}
 
-          {/* Navigation Items */}
-          {navItems.map((item, index) => (
-            <Link
-              key={index}
-              href={item.url}
-              ref={(el) => (navRefs.current[index] = el)}
-              onMouseEnter={() => handleMouseEnter(index)}
-              className="relative px-3 py-2 text-sm font-medium text-black dark:text-white z-10"
-            >
-              {item.title}
-            </Link>
-          ))}
+          {navItems.map((item, index) => {
+            const commonProps = {
+              ref: (el) => (navRefs.current[index] = el),
+              onMouseEnter: () => handleMouseEnter(index),
+              className: 'relative px-3 py-2 text-sm font-medium text-black dark:text-white z-10',
+            };
+
+            return item.type === 'route' ? (
+              <Link key={index} href={item.url} {...commonProps}>
+                {item.title}
+              </Link>
+            ) : (
+              <Link key={index} href={`${item.url}${item.hash}`} scroll={true} {...commonProps}>
+                {item.title}
+              </Link>
+            );
+          })}
         </div>
       </motion.nav>
-    </Container>
-  )
-}
 
-export default Navbar
+      {/* Mobile Fullscreen Nav */}
+      {open && (
+        <div className="fixed z-30 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center">
+          <div
+            className="bg-gray-50/30 w-[90%] h-[80%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl relative"
+            style={{
+              backgroundImage: "url('/sky.png')",
+              backgroundPosition: 'right',
+            }}
+          >
+
+            <div className="w-full h-full overflow-y-auto px-10 py-10 flex flex-col gap-5 items-end backdrop-blur-[0px] rounded-2xl">
+              {navItems.map((item, index) => {
+                const commonProps = {
+                  onClick: () => setOpen(false),
+                  className: 'text-xl font-semibold text-white',
+                };
+
+                return item.type === 'route' ? (
+                  <Link key={index} href={item.url} {...commonProps}>
+                    {item.title}
+                  </Link>
+                ) : (
+                  <Link key={index} href={`${item.url}${item.hash}`} scroll={true} {...commonProps}>
+                    {item.title}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+    </Container>
+  );
+}

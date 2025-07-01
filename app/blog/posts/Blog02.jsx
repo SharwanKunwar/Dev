@@ -104,6 +104,7 @@ export default function Blog02() {
       <div className="text-center text-xl text-green-600 font-semibold">
         🎉 Done! Your <span className="font-bold">Windows</span> or <span className="font-bold">Microsoft Office</span> is now successfully activated. Enjoy! 🙌
       </div>
+      <p className="italic text-sm text-right text-gray-500">Written by Sharwan Jung Kunwar ®</p>
     </motion.div>
   );
 }

@@ -26,7 +26,7 @@ function Page() {
               <UserCard
             name="Sharwan Jung Kunwar"
             address="Kathmandu, Nepal"
-            postTime="Published on July 1, 2025"
+            postTime="Published on July 2, 2025"
             img="computer.png"
           />
           </section>

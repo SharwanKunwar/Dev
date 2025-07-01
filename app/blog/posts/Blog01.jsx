@@ -11,8 +11,8 @@ export default function Blog01() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <motion.h1 className="text-3xl font-bold text-indigo-600" whileHover={{ scale: 1.02 }}>
-        🔧 What is Git and GitHub?
+      <motion.h1 className="text-2xl font-bold text-indigo-600" >
+        What is Git and GitHub?
       </motion.h1>
 
       <p className="text-base leading-relaxed">
@@ -23,7 +23,7 @@ export default function Blog01() {
 
       {/* Git Section */}
       <div className="space-y-2">
-        <h2 className="text-2xl font-semibold text-gray-700">👨‍💻 What is Git?</h2>
+        <h2 className="text-2xl font-semibold text-gray-700">What is Git?</h2>
         <p>
           <strong>Git</strong> is a free and open-source <em>version control system</em>. It was created by{' '}
           <strong>Linus Torvalds</strong> in 2005 — the same person who made the Linux operating system.
@@ -52,19 +52,19 @@ export default function Blog01() {
         <h2 className="text-2xl font-semibold text-gray-700">🚀 Why is it useful for developers?</h2>
         <ul className="list-disc list-inside space-y-2 mt-2 text-gray-800">
           <li>
-            🔄 <strong>Version control</strong>: Go back to working code when things break.
+            <strong>Version control</strong>: <span className='text-neutral-500'>Go back to working code when things break.</span>
           </li>
           <li>
-            👯‍♂️ <strong>Collaboration</strong>: Work with other developers on the same project — from anywhere!
+            <strong>Collaboration</strong>: <span className='text-neutral-500'>Work with other developers on the same project — from anywhere!</span>
           </li>
           <li>
-            🧪 <strong>Experiment safely</strong>: Use branches to test ideas without affecting main code.
+            <strong>Experiment safely</strong>: <span className='text-neutral-500'> Use branches to test ideas without affecting main code.</span>
           </li>
           <li>
-            📜 <strong>History tracking</strong>: Know who made what change and when.
+            <strong>History tracking</strong>: <span className='text-neutral-500'> Know who made what change and when.</span>
           </li>
           <li>
-            🌍 <strong>Open-source sharing</strong>: Contribute to global software projects.
+            <strong>Open-source sharing</strong>: <span className='text-neutral-500'> Contribute to global software projects.</span>
           </li>
         </ul>
       </div>
@@ -78,7 +78,7 @@ export default function Blog01() {
         </p>
       </div>
 
-      <p className="italic text-sm text-right text-gray-500">Written by Sharwan Jung Kunwar 🚀</p>
+      <p className="italic text-sm text-right text-gray-500">Written by Sharwan Jung Kunwar ®</p>
     </motion.section>
   );
 }
