@@ -27,8 +27,8 @@ function Navbar() {
 
 
   const navItems = [
-    { title: 'About', url: '/about' },
-    { title: 'Projects', url: '/projects' },
+    { title: 'About', url: '/' },
+    { title: 'Projects', url: '/' },
     { title: 'Community', url: '/community' },
     { title: 'Contact', url: '/contact' },
     { title: 'Blog', url: '/blog' },

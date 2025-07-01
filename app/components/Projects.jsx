@@ -81,7 +81,7 @@ function Projects() {
           </motion.div>
         ))}
       </div>
-      <button className=' py-2 px-10 rounded-sm border border-black/30 hover:bg-blue-300 translate-1 hover:text-white hover:border-none'>View More</button>
+      <button className='mt-10 py-2 px-10 rounded-sm border border-black/30 hover:bg-blue-300 translate-1 hover:text-white hover:border-none'>View More</button>
     </div>
   )
 }

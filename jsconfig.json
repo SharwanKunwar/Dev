@@ -3,5 +3,8 @@
     "paths": {
       "@/*": ["./*"]
     }
-  }
+  },
+  "exclude": [
+    "app/blog/*.mdx"
+  ]
 }
