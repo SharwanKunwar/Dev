@@ -8,8 +8,8 @@ const inter = Inter({
   weight:["400","500","600","700","800","900"]})
 
 export const metadata = {
-  title: "UnpreditableCoders | A Community where we talk about tech, coding and more",
-  description: "UnpredictableCoders is a vibrant community for tech enthusiasts and coders, sharing ideas, building projects, and exploring the future of development—designed with a clean, modern aesthetic and smooth microinteractions."
+  title: "Sharwan Jung Kunwar | Full Stack Developer & Tech Enthusiast",
+  description: "A modern portfolio and community space by Sharwan Jung Kunwar—where code meets creativity. Showcasing full-stack projects, sharing insights on tech and development, and connecting with fellow coders through clean design and smooth microinteractions."
 };
 
 export default function RootLayout({ children }) {
