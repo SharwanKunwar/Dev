@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 
 const inter = Inter({
   subsets:["latin"],
+  preload:true,
   weight:["400","500","600","700","800","900"]})
 
 export const metadata = {

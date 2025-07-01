@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import { Container } from "./components/Container";
 import Projects from "./components/Projects";
 
-const inter = Inter({weight:["400","500","600","700","800","900"]})
 
 export default function Home() {
   return (
