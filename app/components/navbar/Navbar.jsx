@@ -35,10 +35,10 @@ export default function Navbar() {
 
     // i'm here logic "when clicked msg through mail"
     const handleClick = () => {
-    const email = "sharwankunwar07@gmail.com"; 
-    const subject = encodeURIComponent("Hey Sharwan, I'm here!");
-    const body = encodeURIComponent("Just landed on your site—feels like I just entered the dev multiverse! Just saying hi 👋");
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`, '_blank');
+    const phoneNumber = "+9779763290022";
+    const message = encodeURIComponent("Hey Sharwan! Just visited your site—super cool stuff 🚀🔥");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+
   };
 
 
