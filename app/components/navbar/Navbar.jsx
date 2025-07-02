@@ -152,6 +152,14 @@ export default function Navbar() {
                 );
               })}
             </div>
+              <div className=" flex justify-center items-center rounded w-full mb-10 backdrop-blur-[1px] bg-gray-400/30">
+             <button
+                onClick={handleClick}
+                className="  text-white hover:bg-indigo-500 transition hover:rounded-full flex justify-start items-center rounded text-[18px] w-[90%] py-2 bg-gray-400/30 backdrop-blur-2xl"
+              >
+              <span className='text-4xl'>👋</span>Leave your message for Dev
+              </button>
+          </div>
           </div>
         </div>
       )}
