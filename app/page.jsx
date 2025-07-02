@@ -32,7 +32,7 @@ export default function Home() {
               whileInView={{opacity:1,y:0,filter:'none'}}
               viewport={{once:true}}
               transition={{duration:0.3}}
-            onClick={()=>setMore(!more)} className=" dark:mastWhiteShadow border border-black/30 rounded px-10 py-1 text-[13px] mastShadow hover:bg-blue-300  hover:border-white/30 dark:text-gray-50 dark:border-white/30 dark:hover:text-black">More</motion.button>
+            onClick={()=>setMore(!more)} className=" dark:mastWhiteShadow border border-black/30 rounded px-8 bg-blue-400 text-white py-1 text-[13px] mastShadow hover:bg-blue-300  hover:border-white/30 dark:text-gray-50 dark:border-white/30 dark:hover:text-black">More</motion.button>
 
             <a 
             target="_blank"
