@@ -46,7 +46,10 @@ export default function Navbar() {
         transition={{ duration: 0.3, ease: 'linear' }}
         className="fixed md:inset-x-0 top-0 z-50 md:max-w-5xl md:mx-auto flex items-center rounded-full justify-between px-3 py-2 border border-black/1 bg-white/30 backdrop-blur-2xl dark:bg-neutral-900"
       >
-        <a href="/">
+        <motion.a 
+        initial={{rotate:0}}
+        whileInView={{rotate:3600}}
+        href="/">
           <Image
             className="h-12 w-12 rounded-full bg-blue-200 p-1 object-cover mastShadow"
             src="/computer.png"
@@ -54,7 +57,7 @@ export default function Navbar() {
             width={100}
             height={100}
           />
-        </a>
+        </motion.a>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
