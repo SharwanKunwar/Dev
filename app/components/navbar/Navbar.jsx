@@ -48,8 +48,8 @@ export default function Navbar() {
       >
         <a href="/">
           <Image
-            className="h-12 w-12 rounded-full bg-blue-200 p-1 object-cover"
-            src="/coder.png"
+            className="h-12 w-12 rounded-full bg-blue-200 p-1 object-cover mastShadow"
+            src="/computer.png"
             alt="Logo"
             width={100}
             height={100}
@@ -70,7 +70,7 @@ export default function Navbar() {
           {hovered !== null && (
             <motion.div
               layout
-              className="absolute top-0 h-full bg-neutral-200 dark:bg-neutral-800 rounded-md z-0"
+              className="absolute top-0 h-full bg-neutral-200 dark:bg-neutral-800 rounded-md z-0 "
               initial={false}
               animate={{
                 width: hoverRect.width,
@@ -84,7 +84,7 @@ export default function Navbar() {
             const commonProps = {
               ref: (el) => (navRefs.current[index] = el),
               onMouseEnter: () => handleMouseEnter(index),
-              className: 'relative px-3 py-2 text-sm font-medium text-black dark:text-white z-10',
+              className: 'relative px-3 py-2 text-sm font-medium text-black dark:text-white z-10 ',
             };
 
             return item.type === 'route' ? (
@@ -104,18 +104,18 @@ export default function Navbar() {
       {open && (
         <div className="fixed z-30 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center">
           <div
-            className="bg-gray-50/30 w-[90%] h-[80%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl relative"
+            className="bg-gray-50/30 w-[90%] h-[70%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl relative "
             style={{
               backgroundImage: "url('/sky.png')",
               backgroundPosition: 'right',
             }}
           >
 
-            <div className="w-full h-full overflow-y-auto px-10 py-10 flex flex-col gap-5 items-end backdrop-blur-[0px] rounded-2xl">
+            <div className="w-full h-full overflow-y-auto px-10 py-10 flex flex-col gap-6 items-end backdrop-blur-[0px] rounded-2xl">
               {navItems.map((item, index) => {
                 const commonProps = {
                   onClick: () => setOpen(false),
-                  className: 'text-xl font-semibold text-white',
+                  className: 'text-xl font-semibold text-black rounded mastShadow w-full text-end p-2 pr-5 backdrop-blur-2xl bg-gray-50/30',
                 };
 
                 return item.type === 'route' ? (

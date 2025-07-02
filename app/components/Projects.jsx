@@ -76,18 +76,22 @@ function Projects() {
 
   return (
     <div className="py-10">
-      <p className="text-neutral-400 max-w-lg pt-4 text-sm md:text-sm">
+      <motion.p 
+      initial={{y:15, opacity:0, filter:'blur(10px)'}}
+      whileInView={{y:0, opacity:1, filter:'blur(0px)'}}
+      transition={{duration:0.3,delay:0.1}}
+      id='projects' className="text-neutral-600 max-w-5xl pt-4 text-lg ">
         I love building web apps and products that can impact millions of lives
-      </p>
+      </motion.p>
 
-      <div className="grid grid-cols-1 gap-10 py-7 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 py-7 md:grid-cols-2 ">
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
             initial={{ y: 50, opacity: 0, scale: 0.98, filter: 'blur(10px)' }}
             whileInView={{y: 0,opacity: 1,scale: 1,filter: 'blur(0px)'}}
             transition={{duration: 0.3,delay: index * 0.1,ease: 'easeInOut',}}
-            className="bg-gray-50 rounded-sm p-2 group flex justify-center items-center relative overflow-hidden"
+            className="bg-gray-50 rounded-sm p-2 group flex flex-col justify-center items-center relative overflow-hidden mastShadow"
           >
             {/* Overlay */}
             <motion.div
@@ -121,7 +125,7 @@ function Projects() {
                   : {}
               }
               transition={{ duration: 0.3 }}
-              className="absolute bg-gray-400/30 backdrop-blur-2xl w-full h-full flex p-5 z-30 flex-col gap-2 text-center justify-center rounded-md"
+              className="absolute bg-gray-400/30 backdrop-blur-2xl w-full h-full flex p-6 z-30 flex-col gap-2 text-center justify-center rounded-md"
             >
               <h1 className="text-2xl font-bold text-white">{project.title}</h1>
               <p className="text-[13px] text-gray-50">{project.description}</p>
@@ -141,12 +145,12 @@ function Projects() {
             />
 
             {/* Title */}
-            <h1 className="absolute left-0 -bottom-6 text-[13px] font-bold text-neutral-400">{project.title}</h1>
+            <h1 className=" left-0 top-54 text-[13px] font-bold text-neutral-400 mt-2 w-full">{project.title}</h1>
           </motion.div>
         ))}
       </div>
 
-      <button className="mt-10 py-2 px-10 rounded-sm border border-black/30 hover:bg-blue-300 translate-1 hover:text-white hover:border-none">View More</button>
+      <button className="mt-2 py-2 px-10 rounded-sm border border-black/30 hover:bg-blue-300 translate-1 hover:text-white hover:border-white/30 mastShadow">View More</button>
       
     </div>
   );
