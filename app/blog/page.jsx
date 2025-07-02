@@ -1,6 +1,7 @@
 import { Container } from '../components/Container'
 import Blog01 from './posts/Blog01'
 import Blog02 from './posts/Blog02'
+import Blog03 from './posts/Blog03'
 import UserCard from './UserCard'
 
 
@@ -33,6 +34,19 @@ function Page() {
           />
           </section>
         <Blog02/>
+        </div>
+
+        {/* blog03 */}
+          <div className='pt-15 '>
+          <section className=' flex justify-center items-center w-full h-[100px]'>
+              <UserCard
+            name="Sharwan Kunwar"
+            address="Kathmandu, Nepal"
+            postTime="Published on July 3, 2025"
+            img="coder.png"
+          />
+          </section>
+        <Blog03/>
         </div>
 
 

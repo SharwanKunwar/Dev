@@ -101,6 +101,7 @@ export default function Home() {
         
 
         <Projects/>
+        
       </Container>
     </div>
   );

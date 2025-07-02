@@ -33,6 +33,16 @@ export default function Navbar() {
     setHovered(index);
   };
 
+    // i'm here logic "when clicked msg through mail"
+    const handleClick = () => {
+    const email = "sharwankunwar07@gmail.com"; 
+    const subject = encodeURIComponent("Hey Sharwan, I'm here!");
+    const body = encodeURIComponent("Just landed on your site—feels like I just entered the dev multiverse! Just saying hi 👋");
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`, '_blank');
+  };
+
+
+
   return (
     <Container className="flex justify-center">
       <motion.nav
@@ -100,7 +110,17 @@ export default function Navbar() {
               </Link>
             );
           })}
+          <div className=" flex justify-center items-center rounded">
+             <button
+                onClick={handleClick}
+                className="  text-black hover:bg-indigo-500 transition hover:rounded-full  flex justify-center items-center rounded mr-3 text-2xl"
+              >
+              👋 
+              </button>
+          </div>
+          
         </div>
+        
       </motion.nav>
 
       {/* Mobile Fullscreen Nav */}
