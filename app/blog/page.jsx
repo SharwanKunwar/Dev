@@ -1,20 +1,22 @@
 import { Container } from '../components/Container'
-import React from 'react'
 import Blog01 from './posts/Blog01'
 import Blog02 from './posts/Blog02'
 import UserCard from './UserCard'
 
+
 function Page() {
+
   return (
+    
     <Container>
-      <div className=''>
+      <div className='p-2'>
         <div className='pt-10 '>
           <section className=' flex justify-center items-center w-full h-[100px]'>
               <UserCard
             name="Sharwan Jung Kunwar"
             address="Kathmandu, Nepal"
             postTime="Published on July 1, 2025"
-            img="computer.png"
+            img="coder.png"
           />
           </section>
         <Blog01/>
@@ -24,10 +26,10 @@ function Page() {
           <div className='pt-15 '>
           <section className=' flex justify-center items-center w-full h-[100px]'>
               <UserCard
-            name="Sharwan Jung Kunwar"
+            name="Sharwan Kunwar"
             address="Kathmandu, Nepal"
             postTime="Published on July 2, 2025"
-            img="computer.png"
+            img="coder.png"
           />
           </section>
         <Blog02/>
@@ -38,6 +40,7 @@ function Page() {
 
       </div>
     </Container>
+    
   )
 }
 

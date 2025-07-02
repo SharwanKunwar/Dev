@@ -1,10 +1,13 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
+import FotterTextBounce from './FotterTextBounce';
 
 export default function Blog02() {
+  const [learnMore, setLearnMore] = useState(false);
+
   return (
     <motion.div
       className="max-w-4xl mx-auto p-6 bg-gray-50 text-gray-800 rounded-b-xl shadow-md space-y-6"
@@ -12,8 +15,8 @@ export default function Blog02() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <motion.h1 className="text-3xl font-bold text-blue-700 mb-4" whileHover={{ scale: 1.02 }}>
-        🔐 How to Activate MS Office Easily using MAS
+      <motion.h1 className="text-2xl font-bold text-blue-700 mb-4">
+        How to Activate MS Office Easily using MAS
       </motion.h1>
 
       <div className="space-y-4">
@@ -25,7 +28,7 @@ export default function Blog02() {
 
         <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
           <h3 className="font-semibold text-lg mb-2">📥 Download Links</h3>
-          <ul className="list-disc list-inside space-y-1">
+          <ul className="list-disc list-inside space-y-1 text-[13px]">
             <li>
               🪟{' '}
               <Link href="https://www.microsoft.com/en-us/software-download/windows11" target="_blank" className="text-blue-600 underline">
@@ -48,7 +51,11 @@ export default function Blog02() {
 
       <hr className="my-6 border-gray-300" />
 
-      <section className="space-y-6">
+      <button onClick={()=>setLearnMore(!learnMore)} className='mastShadow py-1 px-6 border border-black/30 hover:border-white/30 hover:bg-blue-300 hover:rounded mb-10'>Learn More</button>
+      {
+        learnMore && (
+          <>
+          <section className="space-y-6">
         <h2 className="text-2xl font-semibold">🪟 Step-by-Step Activation Guide</h2>
 
         <div className="space-y-2">
@@ -69,7 +76,7 @@ export default function Blog02() {
 
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">🔹 Step 3: Choose What to Activate</h3>
-          <ul className="list-disc list-inside ml-4">
+          <ul className="list-disc list-inside ml-4 text-sm md:text-md">
             <li>Press <strong>1</strong> → Activate <strong>Windows</strong> (Permanent – HWID method)</li>
             <li>Press <strong>2</strong> → Activate <strong>MS Office</strong> (Permanent - via Ohook)</li>
           </ul>
@@ -77,7 +84,7 @@ export default function Blog02() {
 
         <div className="bg-green-50 border border-green-200 p-4 rounded-lg space-y-2">
           <h4 className="font-semibold text-green-700">💡 For Windows Activation</h4>
-          <ul className="list-disc list-inside ml-4">
+          <ul className="list-disc list-inside ml-4 text-sm md:text-md">
             <li>Press <code>1</code></li>
             <li>Activation will begin automatically</li>
             <li>Wait until it says <strong>"Activation successful ✅"</strong></li>
@@ -97,14 +104,17 @@ export default function Blog02() {
           <h3 className="font-semibold text-lg">🔁 Step 4: Restart Your Computer</h3>
           <p>Once the activation is finished, <strong>restart your PC</strong> to apply changes.</p>
         </div>
-      </section>
-
       <hr className="my-6 border-gray-300" />
 
-      <div className="text-center text-xl text-green-600 font-semibold">
+      <div className="text-center text-md mb-15 text-green-600 font-semibold">
         🎉 Done! Your <span className="font-bold">Windows</span> or <span className="font-bold">Microsoft Office</span> is now successfully activated. Enjoy! 🙌
       </div>
-      <p className="italic text-sm text-right text-gray-500">Written by Sharwan Jung Kunwar ®</p>
+      </section>
+          </>
+        )
+      }
+
+      <FotterTextBounce author={'Sharwan jung kunwar'} tag01={'Microsoft'} tag02={'MS-OFFICE'} tag03={'Activation'} tag04={'Trick'}/>
     </motion.div>
   );
 }
