@@ -19,9 +19,9 @@ function FotterTextBounce({author,tag01,tag02,tag03,tag04}) {
           bounce: 0.4,
           duration: 0.3
         }}
-        className="italic text-sm text-right text-gray-500"
+        className="italic text-sm text-right text-gray-500 dark:text-gray-200"
       >
-        Written by <span className='text-indigo-600'>{author}</span> ®
+        Written by <span className='text-indigo-600 dark:text-blue-500'>{author}</span> ®
       </motion.p>
         </div>
       </section>

@@ -44,7 +44,7 @@ export default function Navbar() {
           y: scrolled ? 10 : 0,
         }}
         transition={{ duration: 0.3, ease: 'linear' }}
-        className="fixed md:inset-x-0 top-0 z-50 md:max-w-5xl md:mx-auto flex items-center rounded-full justify-between px-3 py-2 border border-black/1 bg-white/30 backdrop-blur-2xl dark:bg-neutral-900"
+        className="fixed md:inset-x-0 top-0 z-50 md:max-w-5xl md:mx-auto flex items-center rounded-full justify-between px-3 py-2 border border-black/1 bg-white/30 backdrop-blur-2xl dark:bg-neutral-800/30 "
       >
         <motion.a 
         initial={{rotate:0}}
@@ -105,7 +105,7 @@ export default function Navbar() {
 
       {/* Mobile Fullscreen Nav */}
       {open && (
-        <div className="fixed z-30 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center">
+        <div className="fixed z-30 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center dark:bg-neutral-800/30 ">
           <div
             className="bg-gray-50/30 w-[90%] h-[70%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl relative "
             style={{

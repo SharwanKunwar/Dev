@@ -80,7 +80,7 @@ function Projects() {
       initial={{y:15, opacity:0, filter:'blur(10px)'}}
       whileInView={{y:0, opacity:1, filter:'blur(0px)'}}
       transition={{duration:0.3,delay:0.1}}
-      id='projects' className="text-neutral-600 max-w-5xl pt-4 text-lg ">
+      id='projects' className="text-neutral-600 max-w-5xl pt-4 text-lg dark:text-neutral-100">
         I love building web apps and products that can impact millions of lives
       </motion.p>
 
@@ -91,7 +91,7 @@ function Projects() {
             initial={{ y: 50, opacity: 0, scale: 0.98, filter: 'blur(10px)' }}
             whileInView={{y: 0,opacity: 1,scale: 1,filter: 'blur(0px)'}}
             transition={{duration: 0.3,delay: index * 0.1,ease: 'easeInOut',}}
-            className="bg-gray-50 rounded-sm p-2 group flex flex-col justify-center items-center relative overflow-hidden mastShadow"
+            className="bg-gray-50 dark:bg-neutral-600 rounded-sm p-2 group flex flex-col justify-center items-center relative overflow-hidden mastShadow dark:mastWhiteShadow "
           >
             {/* Overlay */}
             <motion.div
@@ -150,7 +150,7 @@ function Projects() {
         ))}
       </div>
 
-      <button className="mt-2 py-2 px-10 rounded-sm border border-black/30 hover:bg-blue-300 translate-1 hover:text-white hover:border-white/30 mastShadow">View More</button>
+      <button className="mt-2 py-2 px-10 rounded-sm border border-black/30 hover:bg-blue-300 translate-1 hover:text-white hover:border-white/30 mastShadow dark:border-white/30 dark:text-gray-50 dark:hover:text-black">View More</button>
       
     </div>
   );
