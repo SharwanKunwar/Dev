@@ -27,7 +27,7 @@ function NumberMsg() {
         </div>
       </div>
       <button
-        className='py-2 w-[90%] bg-indigo-500 text-white font-semibold rounded'
+        className='py-2 w-[90%] bg-green-600 text-white font-semibold rounded'
         onClick={MailMessage}
       >
         Process

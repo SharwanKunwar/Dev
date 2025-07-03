@@ -128,7 +128,7 @@ export default function Home() {
             }}
               id="wave"
               onClick={() => setOpenMsgBox(!openMsgBox)}
-              className="absolute -left-30 md:-left-60 top-150 md:top-115 text-black transition hover:rounded-full  flex justify-center items-center rounded text-6xl"
+              className="absolute -left-30 md:-left-60 top-130 md:top-115 text-black transition hover:rounded-full  flex justify-center items-center rounded text-6xl"
               >
               👋
           </motion.button>

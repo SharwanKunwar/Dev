@@ -7,8 +7,15 @@ function Mail() {
   const subject = encodeURIComponent("👋 Hello from your site visitor!");
   const body = encodeURIComponent(msg);
   const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=sharwankunwar@gmail.com&su=${subject}&body=${body}`;
-  window.open(gmailURL, '_blank');
+  const fallbackMailto = `mailto:sharwankunwar@gmail.com?subject=${subject}&body=${body}`;
+
+  const newWindow = window.open(gmailURL, '_blank');
+  if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+    // fallback if Gmail blocked
+    window.location.href = fallbackMailto;
+  }
 };
+
 
 
   return (
