@@ -14,20 +14,20 @@ function NumberMsg() {
       <div className=' w-[90%]'>
         <div className='flex gap-5 text-2xl justify-start items-center ml-2 mt-15'>
           <h1>To: </h1>
-          <span className='text-[18px]'>+9779763290022</span>
+          <span className='text-[18px] text-neutral-400'>+9779763290022</span>
         </div>
         <div className='mt-2'>
-          <h1 className='text-2xl ml-2'>Message: </h1>
+          <h1 className='text-[18px] ml-2'>Message: </h1>
           <textarea 
             value={msg}
             onChange={(e) => setMsg(e.target.value)}
             placeholder='Enter your message'
-            className='mt-2 ml-2 border border-black/30 w-[90%] h-[220px] p-2 mb-5'
+            className='mt-1 ml-2 border border-black/30 w-[90%] h-[220px] p-2 mb-5 text-neutral-500'
           />
         </div>
       </div>
       <button
-        className='py-2 w-[90%] bg-green-600 text-white font-semibold rounded'
+        className='py-3 w-[90%] bg-green-600 text-white font-semibold rounded'
         onClick={MailMessage}
       >
         Process
