@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState,useEffect } from 'react';
 import Image from 'next/image';
 import { Container } from '../Container';
 import Link from 'next/link';
@@ -44,6 +44,16 @@ export default function Navbar() {
 
     // i'm here logic "when clicked msg through mail"
   const [openMsgBox, setOpenMsgBox] = useState(false);
+
+  // Scroll to top on mount
+useEffect(() => {
+  if (open) {
+    window.scrollBy({ top: 50, behavior: 'smooth' }); // scroll down 50px smoothly
+  }else{
+    window.scrollBy({ top: -window.scrollY, behavior: 'smooth' }); 
+  }
+}, [open, setOpen]);
+
   
 
 
@@ -122,7 +132,7 @@ export default function Navbar() {
 
       {/* Mobile Fullscreen Nav */}
       {open && (
-        <div className="fixed z-30 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center dark:bg-neutral-800/30  ">
+        <div className="fixed z-49 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center dark:bg-neutral-800/30  ">
           <div
             className="bg-gray-50/30 w-[90%] h-[70%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl  relative"
             style={{

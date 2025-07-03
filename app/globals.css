@@ -4,6 +4,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* globals.css */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 .mastShadow {
   box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 

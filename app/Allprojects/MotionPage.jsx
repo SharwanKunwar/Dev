@@ -1,36 +1,33 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+'use client'
+import React, { useState,useEffect } from 'react'
+import {motion} from 'motion/react'
 import Image from 'next/image';
-import { motion } from 'motion/react';
-import { useRouter } from 'next/navigation';
 
 
-function Projects() {
-  const [visibleOverlayIndex, setVisibleOverlayIndex] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const router = useRouter();
+function MotionPage() {
 
+    const [visibleOverlayIndex, setVisibleOverlayIndex] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
 
-  // ✅ Detect mobile device based on screen width
-    useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-    }, []);
+    // ✅ Detect mobile device based on screen width
+        useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+        }, []);
+    
+      
+      const toggleOverlay = (index) => {
+        setVisibleOverlayIndex((prev) => (prev === index ? null : index));
+      };
 
-  
-  const toggleOverlay = (index) => {
-    setVisibleOverlayIndex((prev) => (prev === index ? null : index));
-  };
+     // Scroll to top on mount
+        useEffect(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, []);
 
-  //route for projects
-  const goProjects = () => {
-    router.push('/Allprojects');
-  };
-
-  const projects = [
+    const projects = [
     {
       title: 'Personal Portfolio',
       description:'A responsive and modern personal portfolio built with Next.js and Tailwind CSS, showcasing my projects, skills, and passion for full-stack development.',
@@ -82,17 +79,10 @@ function Projects() {
     },
   ];
 
-  return (
-    <div className="py-10">
-      <motion.p 
-      initial={{y:15, opacity:0, filter:'blur(10px)'}}
-      whileInView={{y:0, opacity:1, filter:'blur(0px)'}}
-      transition={{duration:0.3,delay:0.1}}
-      id='projects' className="text-neutral-600 max-w-5xl pt-4 text-lg dark:text-neutral-100">
-        I love building web apps and products that can impact millions of lives
-      </motion.p>
 
-      <div className="grid grid-cols-1 gap-10 py-7 md:grid-cols-2 ">
+
+  return (
+    <div className="grid grid-cols-1 gap-10 py-7 md:grid-cols-2 ">
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
@@ -157,11 +147,7 @@ function Projects() {
           </motion.div>
         ))}
       </div>
-
-      <button onClick={goProjects} className="mt-2 py-2 px-10 rounded-sm border border-black/30 hover:bg-blue-300 translate-1 hover:text-white hover:border-white/30 mastShadow dark:border-white/30 dark:text-gray-50 dark:hover:text-black">View More</button>
-      
-    </div>
-  );
+  )
 }
 
-export default Projects;
+export default MotionPage
