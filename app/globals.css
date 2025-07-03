@@ -16,3 +16,25 @@ html {
               0px 1px 0px 0px rgba(20, 224, 224, 0.89), 
               0px 0px 0px 1px rgba(21, 133, 245, 0.959);
 }
+
+@keyframes wave {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+.animate-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2s infinite;
+}
+
+.mastgBackgroundColor{
+
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}

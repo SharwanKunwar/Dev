@@ -6,8 +6,16 @@ import { Container } from '../Container';
 import Link from 'next/link';
 import { motion, useMotionValueEvent, useScroll } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+import Mail from './message/Mail';
+import NumberMsg from './message/NumberMsg';
+import SocialMsgBox from '../SocialMsgBox';
+
+
+
+
 
 export default function Navbar() {
+
   const [hovered, setHovered] = useState(null);
   const [hoverRect, setHoverRect] = useState({ width: 0, left: 0 });
   const navRefs = useRef([]);
@@ -33,13 +41,11 @@ export default function Navbar() {
     setHovered(index);
   };
 
-    // i'm here logic "when clicked msg through mail"
-    const handleClick = () => {
-    const phoneNumber = "+9779763290022";
-    const message = encodeURIComponent("Hey Sharwan! Just visited your site—super cool stuff 🚀🔥");
-    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
 
-  };
+    // i'm here logic "when clicked msg through mail"
+  const [openMsgBox, setOpenMsgBox] = useState(false);
+  
+
 
 
 
@@ -110,24 +116,15 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <div className=" flex justify-center items-center rounded">
-             <button
-                onClick={handleClick}
-                className="  text-black hover:bg-indigo-500 transition hover:rounded-full  flex justify-center items-center rounded mr-3 text-2xl"
-              >
-              👋 
-              </button>
-          </div>
-          
         </div>
         
       </motion.nav>
 
       {/* Mobile Fullscreen Nav */}
       {open && (
-        <div className="fixed z-30 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center dark:bg-neutral-800/30 ">
+        <div className="fixed z-30 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center dark:bg-neutral-800/30  ">
           <div
-            className="bg-gray-50/30 w-[90%] h-[70%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl relative "
+            className="bg-gray-50/30 w-[90%] h-[70%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl  relative"
             style={{
               backgroundImage: "url('/sky.png')",
               backgroundPosition: 'right',
@@ -151,15 +148,29 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+
+              
             </div>
               <div className=" flex justify-center items-center rounded w-full mb-5 ">
-             <button
-                onClick={handleClick}
-                className="  text-white hover:bg-indigo-500 transition hover:rounded-full flex justify-center items-center rounded text-[18px] w-[90%] py-2 bg-gray-400/30 backdrop-blur-2xl"
-              >
-              <span className='text-4xl'>👋</span>Leave your message for Dev
-              </button>
-          </div>
+                <button
+                  onClick={()=>setOpenMsgBox(!openMsgBox)}
+                  className="  text-white hover:bg-indigo-500 transition hover:rounded-full flex justify-center items-center rounded text-[13px] w-[90%] py-2 underline ">
+                    You can send private messages to me
+                </button>
+              </div>
+
+              {openMsgBox &&(
+                <>
+                <div className='z-50 top-0 absolute bg-white w-full h-full rounded-2xl'>
+                  <div className='border-b w-full h-[15%] flex justify-evenly gap-30 items-center rounded-t-2xl'>
+                    <h1 className='text-2xl'>Message Box</h1>
+                    <X size={30} onClick={() => setOpenMsgBox(false)} className="cursor-pointer" />
+                  </div>
+                  <SocialMsgBox/>
+                </div>
+                </>
+              )}
+
           </div>
         </div>
       )}

@@ -4,13 +4,25 @@ import { Container } from "./components/Container";
 import Projects from "./components/Projects";
 import { useState } from "react";
 import {motion} from 'motion/react';
+import { Menu, X } from 'lucide-react';
 import { FaFacebook,FaLinkedin,FaGithub } from 'react-icons/fa';
+import SocialMsgBox from "./components/SocialMsgBox";
+
+
 
 
 
 
 export default function Home() {
   const [more, setMore] = useState(false);
+
+  const [openMsgBox, setOpenMsgBox] = useState(false);
+
+    const handleClick = () => {
+    const phoneNumber = "+9779763290022";
+    const message = encodeURIComponent("Hey Sharwan! Just visited your site—super cool stuff 🚀🔥");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
 
   return (
     <div id="about" className="min-h-screen flex items-start justify-start">
@@ -103,6 +115,46 @@ export default function Home() {
         <Projects/>
         
       </Container>
+
+      <div className="sticky top-50 flex justify-center items-center rounded">
+          <motion.button
+            initial={{ rotate: 60, opacity: 1 }}
+            animate={{ rotate: [-10, 0, -20], opacity: 1 }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut',
+            }}
+              id="wave"
+              onClick={() => setOpenMsgBox(!openMsgBox)}
+              className="absolute -left-30 md:-left-60 top-150 md:top-115 text-black transition hover:rounded-full  flex justify-center items-center rounded text-6xl"
+              >
+              👋
+          </motion.button>
+          </div>
+
+          {openMsgBox && (
+            <div className=" mastgBackgroundColor fixed  w-screen h-screen top-0 left-0 z-50  flex justify-center items-center">
+              <div className="relative bg-white/30 backdrop-blur-2xl w-[90%] md:w-[50%] h-[80%] rounded-2xl mastShadow flex flex-col">
+                
+                {/* Header with X */}
+                <div className="border-b w-full h-[15%] flex justify-between items-center px-4 rounded-t-2xl">
+                  <h1 className="text-2xl">Message Box</h1>
+                  <X size={30} onClick={() => setOpenMsgBox(false)} className="cursor-pointer" />
+                </div>
+
+                {/* Message box content */}
+                <div className="flex-1 overflow-y-auto">
+                  <SocialMsgBox />
+                </div>
+
+              </div>
+            </div>
+          )}
+
+
+          
     </div>
   );
 }
