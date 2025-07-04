@@ -134,9 +134,9 @@ useEffect(() => {
       {open && (
         <div className="fixed z-49 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center dark:bg-neutral-800/30  ">
           <div
-            className="bg-gray-50/30 w-[90%] h-[70%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl  relative"
+            className="bg-gray-50/30 w-[90%] h-[70%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl relative"
             style={{
-              backgroundImage: "url('/sky.png')",
+              backgroundImage: 'linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%)',
               backgroundPosition: 'right',
             }}
           >
@@ -145,7 +145,7 @@ useEffect(() => {
               {navItems.map((item, index) => {
                 const commonProps = {
                   onClick: () => setOpen(false),
-                  className: 'text-xl font-semibold text-black rounded mastShadow w-full text-end p-2 pr-5 backdrop-blur-2xl bg-gray-50/30',
+                  className: 'font-semibold text-black rounded mastShadow w-full text-end p-2 pr-5 backdrop-blur-2xl bg-gray-50/30',
                 };
 
                 return item.type === 'route' ? (
