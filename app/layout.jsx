@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
+import FotterPage from "./components/FotterPage";
 
 
 const inter = Inter({
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         className={`${inter.className}  antialiased bg-neutral-100   dark:bg-neutral-700`}>
           <Navbar/>
         {children}
+        <FotterPage/>
       </body>
     </html>
   );

@@ -39,9 +39,9 @@ function AllTypeProjects() {
 
   return (
     <Container>
-      <div className=" pt-0 p-5 min-h-screen">
+      <div className=" p-5 min-h-screen">
         <div
-          className="sticky top-20 pl-2 z-40 bg-white/30 backdrop-blur-2xl w-full h-[100px] flex md:flex-wrap gap-5 overflow-x-scroll justify-start items-center"
+          className="sticky top-0 pl-2 z-40 bg-white/30 backdrop-blur-2xl w-full h-[160px] flex md:flex-wrap gap-5 overflow-x-scroll md:justify-center items-end py-4 rounded-b-md"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           <button onClick={() => setSelectedCategory('all')} className={buttonStyle('all')}>

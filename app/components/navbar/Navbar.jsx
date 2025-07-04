@@ -6,8 +6,6 @@ import { Container } from '../Container';
 import Link from 'next/link';
 import { motion, useMotionValueEvent, useScroll } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import Mail from './message/Mail';
-import NumberMsg from './message/NumberMsg';
 import SocialMsgBox from '../SocialMsgBox';
 
 
@@ -30,7 +28,7 @@ export default function Navbar() {
   const navItems = [
     { title: 'About', url: '/', hash: '/', type: 'anchor' },
     { title: 'Projects', url: '/', hash: '#projects', type: 'anchor' },
-    { title: 'Contact', url: '/', hash: '#contact', type: 'anchor' },
+    { title: 'Contact', url: '/contact', type: 'route' },
     { title: 'Community', url: '/community', type: 'route' },
     { title: 'Blog', url: '/blog', type: 'route' },
   ];
@@ -133,15 +131,23 @@ useEffect(() => {
       {/* Mobile Fullscreen Nav */}
       {open && (
         <div className="fixed z-49 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center dark:bg-neutral-800/30  ">
-          <div
+          <motion.div
+          initial = {{y:-300, opacity:0, scale:0.98, filter: 'blur(10px)'}}
+          whileInView={{y:0, opacity:1,  scale:1, filter: 'blur(0px)'}}
+          transition={{duration:0.3, delay:0,}}
+
             className="bg-gray-50/30 w-[90%] h-[70%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl relative"
             style={{
-              backgroundImage: 'linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%)',
+              backgroundImage: 'linear-gradient(225deg, #2CD8D5 0%, #C5C1FF 46%, #FFBAC3 80%)',
               backgroundPosition: 'right',
             }}
           >
 
-            <div className="w-full h-full overflow-y-auto px-10 py-10 flex flex-col gap-6 items-end backdrop-blur-[0px] rounded-2xl">
+            <motion.div 
+            initial={{opacity:0, filter:'blur(10px)'}}
+            whileInView={{opacity:1, filter:'blur(0px)'}}
+            transition={{duration:0.3, delay:0.3}}
+            className="w-full h-full overflow-y-auto px-10 py-10 flex flex-col gap-6 items-end backdrop-blur-[0px] rounded-2xl">
               {navItems.map((item, index) => {
                 const commonProps = {
                   onClick: () => setOpen(false),
@@ -160,7 +166,7 @@ useEffect(() => {
               })}
 
               
-            </div>
+            </motion.div>
               <div className=" flex justify-center items-center rounded w-full mb-5 ">
                 <button
                   onClick={()=>setOpenMsgBox(!openMsgBox)}
@@ -181,7 +187,7 @@ useEffect(() => {
                 </>
               )}
 
-          </div>
+          </motion.div>
         </div>
       )}
     </Container>

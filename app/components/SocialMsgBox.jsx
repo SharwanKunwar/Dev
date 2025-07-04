@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import Mail from './navbar/message/Mail';
 import NumberMsg from './navbar/message/NumberMsg';

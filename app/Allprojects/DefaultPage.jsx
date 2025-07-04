@@ -16,32 +16,32 @@ function DefaultPage() {
     <>
       <div>
         {/* Landing page */}
-        <p className='text-center text-2xl font-bold py-5 underline'>Landing page</p>
-        <div className='border-b border-b-black/30'>
+        <p className=' text-md border border-black/30 font-bold  text-indigo-500 py-2 text-center'>Landing page</p>
+        <div>
           <LandingPages />
         </div>
 
         {/* Tailwindcss page */}
-        <p className='text-center text-2xl font-bold py-5 underline'>Tailwindcss page</p>
-        <div className='border-b border-b-black/30'>
+        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>Tailwindcss page</p>
+        <div>
           <TailwindcssPage />
         </div>
 
         {/* Motion page */}
-        <p className='text-center text-2xl font-bold py-5 underline'>Motion page</p>
-        <div className='border-b border-b-black/30'>
+        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>Motion page</p>
+        <div>
           <MotionPage />
         </div>
 
         {/* 3D page */}
-        <p className='text-center text-2xl font-bold py-5 underline'>3D page</p>
-        <div className='border-b border-b-black/30'>
+        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>3D page</p>
+        <div>
           <R3F3DPage />
         </div>
 
         {/* Demo page */}
-        <p className='text-center text-2xl font-bold py-5 underline'>Demo page</p>
-        <div className='border-b border-b-black/30'>
+        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>Demo page</p>
+        <div>
           <DemoPage />
         </div>
       </div>
