@@ -53,33 +53,13 @@ function Projects() {
       sourceLink: 'https://github.com/SharwanKunwar/Programming-Notes',
     },
     {
-      title: 'BCA Aspirant Hub',
-      description: 'BCA Aspirant Hub is a helpful platform for BCA students. It offers notes, model questions, and updates to keep aspirants informed, organized, and prepared for their academic journey.',
-      ImgUrl: '/Work/work03.png',
-      projectLink: 'https://bca-aspirant-hub.vercel.app/',
-      sourceLink: 'https://github.com/SharwanKunwar/BCA-Aspirant-Hub-0.1',
-    },
-    {
       title: 'Home Page',
-      description: "A responsive UI project built using Material UI and React. It showcases a modern design with clean layout and components, reflecting Google’s Material Design principles. #MaterialUI",
+      description: 'A responsive UI project built using Material UI and React. It showcases a modern design with clean layout and components, reflecting Google’s Material Design principles. #MaterialUI',
       ImgUrl: '/Work/HomePage.png',
       projectLink: 'https://sharwankunwar.github.io/Web-UI/',
       sourceLink: 'https://github.com/SharwanKunwar/Web-UI',
-    },
-    {
-      title: 'CasinoPlanet',
-      description: 'CasinoPlanet is a web-based casino game with simple, fun gameplay. Built using HTML, CSS, and JavaScript, it offers a playful way to explore basic front-end development concepts.',
-      ImgUrl: '/Work/work05.png',
-      projectLink: 'https://sharwankunwar.github.io/Casino-online/',
-      sourceLink: 'https://github.com/SharwanKunwar/Casino-online',
-    },
-    {
-      title: 'Demo Digitalize Ideas',
-      description: 'Demo Digitalize Ideas is a concept project showcasing a modern, responsive landing page layout. It reflects creative design and layout skills using HTML, CSS, and responsive techniques.',
-      ImgUrl: '/Work/work06.png',
-      projectLink: 'https://sharwan-jung-kunwar.vercel.app/',
-      sourceLink: 'https://github.com/SharwanKunwar/Frontend-development/tree/main/FRONTEND-PRACTICE%20PAGES/web04',
-    },
+    }
+
   ];
 
   return (
@@ -89,7 +69,7 @@ function Projects() {
       whileInView={{y:0, opacity:1, filter:'blur(0px)'}}
       transition={{duration:0.3,delay:0.1}}
       id='projects' className="text-neutral-600 max-w-5xl pt-4 text-lg dark:text-neutral-100">
-        I love building web apps and products that can impact millions of lives
+        “Projects I’ve built. Problems solved. Lessons learned. Stories told through code.”
       </motion.p>
 
       <div className="grid grid-cols-1 gap-10 py-7 md:grid-cols-2 ">
@@ -160,6 +140,17 @@ function Projects() {
 
       <button onClick={goProjects} className="mt-2 py-2 px-10 rounded-sm border border-black/30 hover:bg-blue-300 translate-1 hover:text-white hover:border-white/30 mastShadow dark:border-white/30 dark:text-gray-50 dark:hover:text-black">View More</button>
       
+      {/* // blogs info */}
+      <div className='bg-red-400 my-20 p-5'>
+        <div className='bg-yellow-400'>
+          <h1>Recent Blogs</h1>
+        </div>
+
+        {/* bloooooooo */}
+        <div className='bg-purple-500 mt-10'>
+          aadfasdfdf
+        </div>
+      </div>
     </div>
   );
 }
