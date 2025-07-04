@@ -19,6 +19,7 @@ function AllTypeProjects() {
       case 'landing':
         return <LandingPages />;
       case 'tailwind':
+        
         return <TailwindcssPage />;
       case 'motion':
         return <MotionPage />;
