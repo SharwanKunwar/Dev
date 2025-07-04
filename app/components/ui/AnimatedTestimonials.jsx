@@ -40,7 +40,7 @@ export const AnimatedTestimonials = ({
   if (!current) return null;
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className="mx-auto max-w-sm px-4 md:py-5 font-sans antialiased md:max-w-4xl md:px-8 lg:px-10">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         {/* Image Section */}
         <div>
@@ -92,7 +92,7 @@ export const AnimatedTestimonials = ({
         </div>
 
         {/* Text Section */}
-        <div className="flex flex-col justify-between py-4">
+        <div className="flex flex-col justify-between md:py-10">
           <motion.div
             key={current.id}
             initial={{ y: 20, opacity: 0 }}
@@ -100,13 +100,13 @@ export const AnimatedTestimonials = ({
             exit={{ y: -20, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <h3 className="text-2xl font-bold text-black dark:text-white">
+            <h3 className="text-2xl  font-bold text-black dark:text-white">
               {current.title}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <p className="text-md mt-2 text-gray-500 dark:text-neutral-500">
               {current.time}
             </p>
-            <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+            <motion.p className="mt-4 md:text-lg text-gray-500 dark:text-neutral-300 text-md">
               {current.quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

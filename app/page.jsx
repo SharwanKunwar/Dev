@@ -6,6 +6,7 @@ import { useState } from "react";
 import {motion} from 'motion/react';
 import { FaFacebook,FaLinkedin,FaGithub } from 'react-icons/fa';
 import  AnimatedTestimonialsDemo  from "./components/ui/AnimatedTestimonialsDemo";
+import Image from "next/image";
 
 
 
@@ -106,20 +107,70 @@ export default function Home() {
 
         <Projects/>
         
-{/* // blogs info */}
-<div className=' my-20 p-5'>
-  <div className=' p-6 rounded-xl mastShadow'>
-    <h1 className='text-3xl font-bold text-gray-900'>📝 Recent Blogs</h1>
-    <p className='text-gray-500 mt-2 text-base max-w-2xl'>
-      Here’s what I’ve been writing lately — deep dives, clever insights, tech rants, and occasional caffeine-fueled thoughts. Whether you're here to learn or just peek into my curious brain, you’re welcome!
-    </p>
-  </div>
+        {/* // blogs info */}
+        <div className=' my-20 p-5'>
+          <div className=' p-6 rounded-xl mastShadow'>
+            <h1 className='text-3xl font-bold text-gray-900'>📝 Recent Blogs</h1>
+            <p className='text-gray-500 mt-2 text-sm max-w-2xl'>
+              Here’s what I’ve been writing lately — deep dives, clever insights, tech rants, and occasional caffeine-fueled thoughts. Whether you're here to learn or just peek into my curious brain, you’re welcome!
+            </p>
+          </div>
 
-  {/* bloooooooo */}
-  <div className=' mt-10 p-4 rounded-xl mastShadow'>
-    <AnimatedTestimonialsDemo />
-  </div>
-</div>
+          {/* bloooooooo */}
+          <div className=' mt-10 p-4 rounded-xl mastShadow'>
+            <AnimatedTestimonialsDemo />
+          </div>
+        </div>
+
+        {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+        <div className="text-center py-10">About</div>
+
+        <div className="flex flex-wrap rounded-md mastShadow">
+          <div className="w-6/12 flex justify-center items-center">
+
+          <div className="bg-yellow-400 w-[400px] h-[400px]">
+            a;dfjk
+          </div>
+
+          </div>
+          
+          <div className="w-6/12 flex justify-center items-center p-5 rounded-2xl">
+
+          <motion.div 
+          initial={{opacity:0, filter:'blur(5px)'}}
+          whileInView={{opacity:1, filter:'none'}}
+          transition={{duration:0.3}}
+
+          className="bg-yellow-400 w-[400px] h-[400px] flex flex-wrap relative rounded-2xl">
+            <div className="w-[200px] h-[200px] bg-orange-500 rounded-2xl">a</div>
+            <div className="w-[200px] h-[200px] bg-pink-500 rounded-2xl">a</div>
+            <div className="w-[200px] h-[200px] bg-purple-500 rounded-2xl">a</div>
+            <div className="w-[200px] h-[200px] bg-orange-500 rounded-2xl">a</div>
+            <div className="absolute w-full h-full rounded-2xl bg-white/30 backdrop-blur-2xl flex justify-center items-center">
+             <motion.div
+                animate={{
+                  y: [0, -10, 0], // move up and down
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              >
+                <Image
+                  className="bg-white w-[100%] rounded-xl"
+                  src="/coder.png"
+                  width={200}
+                  height={200}
+                  alt="img"
+                />
+              </motion.div>
+            </div>
+          </motion.div>
+
+          </div>
+
+        </div>
 
 
       </Container>
