@@ -140,17 +140,7 @@ function Projects() {
 
       <button onClick={goProjects} className="mt-2 py-2 px-10 rounded-sm border border-black/30 hover:bg-blue-300 translate-1 hover:text-white hover:border-white/30 mastShadow dark:border-white/30 dark:text-gray-50 dark:hover:text-black">View More</button>
       
-      {/* // blogs info */}
-      <div className='bg-red-400 my-20 p-5'>
-        <div className='bg-yellow-400'>
-          <h1>Recent Blogs</h1>
-        </div>
-
-        {/* bloooooooo */}
-        <div className='bg-purple-500 mt-10'>
-          aadfasdfdf
-        </div>
-      </div>
+     
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import { useState } from "react";
 import {motion} from 'motion/react';
 import { FaFacebook,FaLinkedin,FaGithub } from 'react-icons/fa';
+import  AnimatedTestimonialsDemo  from "./components/ui/AnimatedTestimonialsDemo";
 
 
 
@@ -105,6 +106,22 @@ export default function Home() {
 
         <Projects/>
         
+{/* // blogs info */}
+<div className=' my-20 p-5'>
+  <div className=' p-6 rounded-xl mastShadow'>
+    <h1 className='text-3xl font-bold text-gray-900'>📝 Recent Blogs</h1>
+    <p className='text-gray-500 mt-2 text-base max-w-2xl'>
+      Here’s what I’ve been writing lately — deep dives, clever insights, tech rants, and occasional caffeine-fueled thoughts. Whether you're here to learn or just peek into my curious brain, you’re welcome!
+    </p>
+  </div>
+
+  {/* bloooooooo */}
+  <div className=' mt-10 p-4 rounded-xl mastShadow'>
+    <AnimatedTestimonialsDemo />
+  </div>
+</div>
+
+
       </Container>
 
     
