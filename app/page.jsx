@@ -16,6 +16,7 @@ import Image from "next/image";
 
 export default function Home() {
   const [more, setMore] = useState(false);
+  const [more02, setMore02] = useState(false);
 
   return (
     <div id="about" className="min-h-screen flex items-start justify-start">
@@ -125,27 +126,49 @@ export default function Home() {
         {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         <div className="text-center py-10">About</div>
 
-        <div className="flex flex-wrap rounded-md mastShadow">
-          <div className="w-6/12 flex justify-center items-center">
+        <div className=" md:flex-row flex-wrap flex flex-col-reverse  rounded-md mastShadow py-5">
+          <div className="md:w-6/12 w-full  flex  justify-center items-center">
 
-          <div className="bg-yellow-400 w-[400px] h-[400px]">
-            a;dfjk
+          <div className="w-[400px]  p-5 mastShadow flex flex-col gap-3 mr-2 ml-2">
+            <p className="text-gray-500 ">
+                I'm Sharwan Jung Kunwar — a full-stack developer who believes clean code and clean UIs both
+                deserve equal respect (and dark mode). I build web and mobile apps that not only *work*, but
+                also *make sense* — because users deserve more than just "Hello World".
+              </p>
+                <button onClick={()=>setMore02(!more02)} className='border mt-5 mb-5'>View More</button>
+                {more02 && (
+                    <>
+                    <p className="text-gray-500">
+                        My toolkit? Java, Spring Boot, React, PostgreSQL, Tailwind — and a dash of late-night debugging
+                        wizardry. I love solving real-world problems with tech, and occasionally, solving my own
+                        existential crises with console logs.
+                    </p>
+                    <p className="text-gray-500">
+                        When I'm not coding, I'm either strumming my guitar like it's my second keyboard, or learning
+                        boxing — because nothing says "I can handle tough bugs" like dodging punches.
+                    </p>
+                    <p className="text-gray-500">
+                        I'm not just here to build things; I'm here to build things that matter — with people who care
+                        about quality, creativity, and pushing the limits (without breaking production... too often).
+                    </p>
+                    </>
+                  )}
           </div>
 
           </div>
           
-          <div className="w-6/12 flex justify-center items-center p-5 rounded-2xl">
+          <div className="md:w-6/12 w-full flex justify-center items-center p-5 rounded-2xl">
 
-          <motion.div 
+          <motion.div  
           initial={{opacity:0, filter:'blur(5px)'}}
           whileInView={{opacity:1, filter:'none'}}
           transition={{duration:0.3}}
 
-          className="bg-yellow-400 w-[400px] h-[400px] flex flex-wrap relative rounded-2xl">
-            <div className="w-[200px] h-[200px] bg-orange-500 rounded-2xl">a</div>
-            <div className="w-[200px] h-[200px] bg-pink-500 rounded-2xl">a</div>
-            <div className="w-[200px] h-[200px] bg-purple-500 rounded-2xl">a</div>
-            <div className="w-[200px] h-[200px] bg-orange-500 rounded-2xl">a</div>
+          className="bg-yellow-400 w-[400px] h-[400px] flex flex-wrap relative rounded-2xl gap-5 justify-center items-center">
+            <div className=" w-[160px] h-[180px]  bg-orange-500 rounded-2xl">a</div>
+            <div className=" w-[160px] h-[180px]  bg-pink-500 rounded-2xl">a</div>
+            <div className=" w-[160px] h-[180px]  bg-purple-500 rounded-2xl">a</div>
+            <div className=" w-[160px] h-[180px]  bg-orange-500 rounded-2xl">a</div>
             <div className="absolute w-full h-full rounded-2xl bg-white/30 backdrop-blur-2xl flex justify-center items-center">
              <motion.div
                 animate={{
