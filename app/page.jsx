@@ -165,11 +165,11 @@ export default function Home() {
           transition={{duration:0.3}}
 
           className="bg-yellow-400 w-[400px] h-[400px] flex flex-wrap relative rounded-2xl gap-5 justify-center items-center">
-            <div className=" w-[160px] h-[180px]  bg-orange-500 rounded-2xl">a</div>
-            <div className=" w-[160px] h-[180px]  bg-pink-500 rounded-2xl">a</div>
-            <div className=" w-[160px] h-[180px]  bg-purple-500 rounded-2xl">a</div>
-            <div className=" w-[160px] h-[180px]  bg-orange-500 rounded-2xl">a</div>
-            <div className="absolute w-full h-full rounded-2xl bg-white/30 backdrop-blur-2xl flex justify-center items-center">
+            <div className=" w-[40%] h-[40%]  bg-orange-500 rounded-2xl"></div>
+            <div className=" w-[40%] h-[40%]  bg-pink-500 rounded-2xl"></div>
+            <div className=" w-[40%] h-[40%]  bg-purple-500 rounded-2xl"></div>
+            <div className=" w-[40%] h-[40%]  bg-orange-500 rounded-2xl"></div>
+            <div className="absolute w-full h-full rounded-2xl backdrop-blur-2xl bg-white/30 flex justify-center items-center">
              <motion.div
                 animate={{
                   y: [0, -10, 0], // move up and down
