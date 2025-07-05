@@ -146,7 +146,7 @@ useEffect(() => {
             <motion.div 
             initial={{opacity:0, filter:'blur(10px)'}}
             whileInView={{opacity:1, filter:'blur(0px)'}}
-            transition={{duration:0.3, delay:0.3}}
+            transition={{duration:0.5}}
             className="w-full h-full overflow-y-auto px-10 py-10 flex flex-col gap-6 items-end backdrop-blur-[0px] rounded-2xl">
               {navItems.map((item, index) => {
                 const commonProps = {

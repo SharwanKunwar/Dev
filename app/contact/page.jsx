@@ -44,8 +44,8 @@ function Page() {
 
 
         
-        <h1 className='md:hidden  pt-15 pl-5 text-2xl font-semibold'>Leave a message for me</h1>
-        <div className=" absolute mt-4 w-[400px] h-[600px] max-w-md bg-white rounded-xl shadow-md md:bottom-10 top-30 md:right-4 md:left-150  left-1.5   z-10">
+        <h1 className='md:hidden absolute top-25  pl-5 text-2xl font-semibold'>Leave a message for me</h1>
+        <div className=" absolute mt-4 md:w-[400px] w-full md:h-[600px] h-[500px] max-w-md bg-white rounded-xl shadow-md md:bottom-10 top-30 md:right-4 md:left-150  left-1.5   z-10 ">
           <SocialMsgBox />
           <div className='absolute bottom-0 right-0 w-full h-[120px] flex justify-center items-center'>
             <div className='bg-white mastShadow w-[90%] h-[60%] rounded-md border border-white/30 flex justify-center items-center gap-10'>

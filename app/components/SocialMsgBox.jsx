@@ -8,13 +8,13 @@ function SocialMsgBox() {
 
   return (
     <div className='absolute w-full h-[85%] flex flex-col gap-2 rounded-b-2xl'>
-      <div className='w-full h-full'>
-        <div className='w-full h-[15%] flex gap-3 justify-between items-center px-2'>
+      <div className='w-full h-full flex flex-col justify-start items-center'>
+        <div className='w-[90%] h-[15%] flex gap-3 md:justify-between justify-center items-center px-2 mastShadow mt-2'>
           
 
           <button
             onClick={() => setMessageType("whatsapp")}
-            className={`w-6/12 h-[40px] z-50 rounded font-semibold transition-all duration-200 mastShadow ${
+            className={`md:w-6/12 w-[40%] h-[40px] z-50 rounded font-semibold transition-all duration-200 mastShadow ${
               messageType === "whatsapp"
                 ? "bg-green-600 text-white mastShadow"
                 : "bg-green-200 text-black mastShadow"
@@ -25,7 +25,7 @@ function SocialMsgBox() {
 
           <button
             onClick={() => setMessageType("mail")}
-            className={`w-6/12 h-[40px] z-50 rounded font-semibold transition-all duration-200 mastShadow ${
+            className={`md:w-6/12 w-[40%] h-[40px] z-50 rounded font-semibold transition-all duration-200 mastShadow ${
               messageType === "mail"
                 ? "bg-indigo-500 text-white mastShadow"
                 : "bg-purple-200 text-black mastShadow"

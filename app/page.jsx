@@ -7,6 +7,7 @@ import {motion} from 'motion/react';
 import { FaFacebook,FaLinkedin,FaGithub } from 'react-icons/fa';
 import  AnimatedTestimonialsDemo  from "./components/ui/AnimatedTestimonialsDemo";
 import Image from "next/image";
+import SkillsCard from "./components/SkillsCard";
 
 
 
@@ -125,7 +126,6 @@ export default function Home() {
 
         {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         <div className="text-center py-10">About</div>
-
         <div className=" md:flex-row flex-wrap flex flex-col-reverse  rounded-md mastShadow py-5">
           <div className="md:w-6/12 w-full  flex  justify-center items-center">
 
@@ -135,7 +135,7 @@ export default function Home() {
                 deserve equal respect (and dark mode). I build web and mobile apps that not only *work*, but
                 also *make sense* — because users deserve more than just "Hello World".
               </p>
-                <button onClick={()=>setMore02(!more02)} className='border mt-5 mb-5'>View More</button>
+                <button onClick={()=>setMore02(!more02)} className='border border-black/30 py-1 mt-5 mb-5 mastShadow'>View More</button>
                 {more02 && (
                     <>
                     <p className="text-gray-500">
@@ -164,7 +164,7 @@ export default function Home() {
           whileInView={{opacity:1, filter:'none'}}
           transition={{duration:0.3}}
 
-          className="bg-yellow-400 w-[400px] h-[400px] flex flex-wrap relative rounded-2xl gap-5 justify-center items-center">
+          className="bg-yellow-400 w-[400px] h-[400px] flex flex-wrap relative rounded-2xl gap-5 justify-center items-center mastShadow border border-black/30">
             <div className=" w-[40%] h-[40%]  bg-orange-500 rounded-2xl"></div>
             <div className=" w-[40%] h-[40%]  bg-pink-500 rounded-2xl"></div>
             <div className=" w-[40%] h-[40%]  bg-purple-500 rounded-2xl"></div>
@@ -179,10 +179,11 @@ export default function Home() {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
+                className="flex justify-center items-center "
               >
                 <Image
-                  className="bg-white w-[100%] rounded-xl"
-                  src="/coder.png"
+                  className="bg-white w-[80%] rounded-xl mastShadow border-white/30 border"
+                  src="/sharwanjungkunwar0007.jpg"
                   width={200}
                   height={200}
                   alt="img"
@@ -193,6 +194,11 @@ export default function Home() {
 
           </div>
 
+        </div>
+
+        <h1 className="mt-10 mb-3 text-2xl">Teck Stack</h1>
+        <div className=" md:w-full mastShadow rounded-md">
+          <SkillsCard/>
         </div>
 
 

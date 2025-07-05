@@ -12,7 +12,7 @@ function NumberMsg() {
   return (
     <>
       <div className=' w-[90%]'>
-        <div className='flex gap-5 text-2xl justify-start items-center ml-2 mt-15'>
+        <div className='flex gap-5 md:text-2xl justify-start items-center ml-2 mt-15'>
           <h1>To: </h1>
           <span className='text-[18px] text-neutral-400'>+9779763290022</span>
         </div>
@@ -22,7 +22,7 @@ function NumberMsg() {
             value={msg}
             onChange={(e) => setMsg(e.target.value)}
             placeholder='Enter your message'
-            className='mt-1 ml-2 border border-black/30 w-[90%] h-[220px] p-2 mb-5 text-neutral-500'
+            className='mt-1 ml-2 border border-black/30 w-[90%] md:h-[220px] h-[100px] p-2 mb-5 text-neutral-500'
           />
         </div>
       </div>
