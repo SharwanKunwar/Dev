@@ -35,6 +35,13 @@ function R3F3DPage() {
       projectLink: 'https://heart-3d-r3-f.vercel.app/',
       sourceLink: 'https://github.com/SharwanKunwar/heart-3d-R3F',
     },
+    {
+      title: '3D Scene | R3F',
+      description:'Interactive 3D scene with GLB model, HDR lighting, smooth animations, and orbit controls, built using React Three Fiber, Next.js, and Tailwind CSS.',
+      ImgUrl: '/Work/space.png',
+      projectLink: 'https://3d-scene-mu.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/3D-Scene-R3F',
+    },
     
   ];
 
