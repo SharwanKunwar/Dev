@@ -148,7 +148,6 @@ export default function Navbar() {
                   onClick: () => setOpen(false),
                   className: 'font-semibold text-black rounded mastShadow w-full text-end p-2 pr-5 backdrop-blur-2xl bg-gray-50/30',
                 };
-
                 return item.type === 'route' ? (
                   <Link key={index} href={item.url} {...commonProps}>
                     {item.title}

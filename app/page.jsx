@@ -109,12 +109,18 @@ export default function Home() {
 
         <Projects/>
         
+        <section className='my-10'>
+            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" strokeWidth="0.05"></path>
+          </svg>
+          </section>
         {/* // blogs info */}
-        <div className=' my-20 p-5'>
-          <div className=' p-6 rounded-xl mastShadow'>
-            <h1 className='text-3xl font-bold text-gray-900'>📝 Recent Blogs</h1>
+        <div className='  p-5'>
+          
+          <div className=' p-3 rounded-xl mastShadow flex flex-col'>
+            <h1 className='text-3xl font-bold text-gray-900'>📝 Writen Blogs</h1>
             <p className='text-gray-500 mt-2 text-sm max-w-2xl'>
-              Here’s what I’ve been writing lately — deep dives, clever insights, tech rants, and occasional caffeine-fueled thoughts. Whether you're here to learn or just peek into my curious brain, you’re welcome!
+              Tech thoughts, deep dives, and the occasional rant — all from my curious, caffeine-fueled brain. Dive in and explore!
             </p>
           </div>
 
@@ -125,7 +131,15 @@ export default function Home() {
         </div>
 
         {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-        <div className="text-center py-10">About</div>
+        <div className="text-center my-10">
+          <h1>About</h1>
+          <section className=''>
+            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" strokeWidth="0.05"></path>
+          </svg>
+          </section>
+
+        </div>
         <div className=" md:flex-row flex-wrap flex flex-col-reverse  rounded-md mastShadow py-5">
           <div className="md:w-6/12 w-full  flex  justify-center items-center">
 

@@ -23,8 +23,14 @@ function Page() {
         <Blog01/>
         </div>
 
+        <section className='my-5'>
+            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" strokeWidth="0.01"></path>
+          </svg>
+          </section>
+
         {/* blog02 */}
-          <div className='pt-15 '>
+          <div className=''>
           <section className=' flex justify-center items-center w-full h-[100px]'>
               <UserCard
             name="Sharwan Kunwar"
@@ -36,8 +42,14 @@ function Page() {
         <Blog02/>
         </div>
 
+        <section className='my-5'>
+            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" strokeWidth="0.01"></path>
+          </svg>
+          </section>
+
         {/* blog03 */}
-          <div className='pt-15 '>
+          <div className=''>
           <section className=' flex justify-center items-center w-full h-[100px]'>
               <UserCard
             name="Sharwan Kunwar"
