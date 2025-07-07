@@ -29,28 +29,24 @@ function DefaultPage() {
         </div>
 
         {/* Tailwindcss page */}
-        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>Tailwindcss page</p>
+        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>Tailwindcss Projects</p>
         <div>
           <TailwindcssPage />
         </div>
 
         {/* Motion page */}
-        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>Motion page</p>
+        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>Motion Projects</p>
         <div>
           <MotionPage />
         </div>
 
         {/* 3D page */}
-        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>3D page</p>
+        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>3D Projects</p>
         <div>
           <R3F3DPage />
         </div>
 
-        {/* Demo page */}
-        <p className='text-center border border-black/30 text-md text-indigo-500  font-bold py-2 '>Demo page</p>
-        <div>
-          <DemoPage />
-        </div>
+        
       </div>
 
       

@@ -44,13 +44,13 @@ export default function Navbar() {
   const [openMsgBox, setOpenMsgBox] = useState(false);
 
   // Scroll to top on mount
-useEffect(() => {
-  if (open) {
-    window.scrollBy({ top: 50, behavior: 'smooth' }); // scroll down 50px smoothly
-  }else{
-    window.scrollBy({ top: -window.scrollY, behavior: 'smooth' }); 
-  }
-}, [open, setOpen]);
+// useEffect(() => {
+//   if (open) {
+//     window.scrollBy({ top: 50, behavior: 'smooth' }); // scroll down 50px smoothly
+//   }else{
+//     window.scrollBy({ top: -window.scrollY, behavior: 'smooth' }); 
+//   }
+// }, [open, setOpen]);
 
   
 
@@ -132,10 +132,6 @@ useEffect(() => {
       {open && (
         <div className="fixed z-49 w-screen h-screen bg-white/30 backdrop-blur-2xl left-0 top-0 flex justify-center items-center dark:bg-neutral-800/30  ">
           <motion.div
-          initial = {{y:-300, opacity:0, scale:0.98, filter: 'blur(10px)'}}
-          whileInView={{y:0, opacity:1,  scale:1, filter: 'blur(0px)'}}
-          transition={{duration:0.3, delay:0,}}
-
             className="bg-gray-50/30 w-[90%] h-[70%] flex flex-col gap-5 justify-start items-end rounded-2xl backdrop-blur-2xl shadow-xl relative"
             style={{
               backgroundImage: 'linear-gradient(225deg, #2CD8D5 0%, #C5C1FF 46%, #FFBAC3 80%)',
@@ -144,9 +140,8 @@ useEffect(() => {
           >
 
             <motion.div 
-            initial={{opacity:0, filter:'blur(10px)'}}
-            whileInView={{opacity:1, filter:'blur(0px)'}}
-            transition={{duration:0.5}}
+            initial={{y:-20,opacity:0,filter:'blur(5px)'}}
+            whileInView={{y:0,opacity:1, filter:'blur(0px)'}}
             className="w-full h-full overflow-y-auto px-10 py-10 flex flex-col gap-6 items-end backdrop-blur-[0px] rounded-2xl">
               {navItems.map((item, index) => {
                 const commonProps = {

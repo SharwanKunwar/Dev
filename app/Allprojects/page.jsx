@@ -35,7 +35,7 @@ function AllTypeProjects() {
   };
 
   const buttonStyle = (type) =>
-    `py-2 px-10 rounded text-white transition-all duration-300 ${
+    `py-2 px-7 rounded text-white transition-all duration-300 ${
       selectedCategory === type ? 'bg-purple-600' : 'bg-purple-400'
     }`;
 
@@ -43,14 +43,14 @@ function AllTypeProjects() {
     <Container>
       <div className=" p-5 min-h-screen">
         <div
-          className="sticky top-0 pl-2 z-40 bg-white/30 backdrop-blur-2xl w-full h-[160px] flex md:flex-wrap gap-5 overflow-x-scroll md:justify-center items-end py-4 rounded-b-md"
+          className="sticky top-0 pl-2 z-40 bg-white/30 backdrop-blur-2xl w-full h-[160px] flex md:flex-wrap gap-4 overflow-x-scroll md:justify-center items-end py-4 rounded-b-md"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           <button onClick={() => setSelectedCategory('all')} className={buttonStyle('all')}>
             All
           </button>
           <button onClick={() => setSelectedCategory('longProjects')} className={buttonStyle('longProjects')}>
-            Long Projects
+            LongProject
           </button>
           <button onClick={() => setSelectedCategory('landing')} className={buttonStyle('landing')}>
             Landing
