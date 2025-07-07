@@ -42,6 +42,13 @@ function R3F3DPage() {
       projectLink: 'https://3d-scene-mu.vercel.app/',
       sourceLink: 'https://github.com/SharwanKunwar/3D-Scene-R3F',
     },
+    {
+      title: '3D Book Slider | R3F | Three js | etc',
+      description:'Interactive 3D book with page flipping, animated scrolling text, and realistic lighting, built using Next.js, React Three Fiber, and Tailwind CSS.',
+      ImgUrl: '/Work/3dBook.png',
+      projectLink: 'https://3-d-book-slider.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/3D-Book-Slider',
+    },
     
   ];
 
