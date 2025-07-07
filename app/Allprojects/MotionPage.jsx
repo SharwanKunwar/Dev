@@ -29,54 +29,13 @@ function MotionPage() {
 
     const projects = [
     {
-      title: 'Personal Portfolio',
-      description:'A responsive and modern personal portfolio built with Next.js and Tailwind CSS, showcasing my projects, skills, and passion for full-stack development.',
-      ImgUrl: '/Work/work001.png',
-      projectLink: 'https://sharwan-jung-kunwar.vercel.app/',
-      sourceLink: 'https://github.com/SharwanKunwar/Sharwan-Jung-Kunwar',
+      title: 'Comming Soon',
+      description:'...',
+      ImgUrl: '/computer.png',
+      projectLink: 'https://github.com/SharwanKunwar',
+      sourceLink: 'https://github.com/SharwanKunwar',
     },
-    {
-      title: 'My Portfolio 07',
-      description: 'My Portfolio 07 is a personal website showcasing my projects, skills, and passion. With a clean design and smooth navigation, it highlights my work, tech stack, and contact information.',
-      ImgUrl: '/Work/work01.png',
-      projectLink: 'https://sharwankunwar.github.io/My-Portfolio-07/',
-      sourceLink: 'https://github.com/SharwanKunwar/My-Portfolio-07',
-    },
-    {
-      title: 'Programming Notes',
-      description: 'Programming Notes is a responsive web app that helps developers organize and access key concepts. Explore notes, syntax, and examples—all in one place. Built for simplicity and learning.',
-      ImgUrl: '/Work/work02.png',
-      projectLink: 'https://programming-notes-eight.vercel.app/',
-      sourceLink: 'https://github.com/SharwanKunwar/Programming-Notes',
-    },
-    {
-      title: 'BCA Aspirant Hub',
-      description: 'BCA Aspirant Hub is a helpful platform for BCA students. It offers notes, model questions, and updates to keep aspirants informed, organized, and prepared for their academic journey.',
-      ImgUrl: '/Work/work03.png',
-      projectLink: 'https://bca-aspirant-hub.vercel.app/',
-      sourceLink: 'https://github.com/SharwanKunwar/BCA-Aspirant-Hub-0.1',
-    },
-    {
-      title: 'Home Page',
-      description: "A responsive UI project built using Material UI and React. It showcases a modern design with clean layout and components, reflecting Google’s Material Design principles. #MaterialUI",
-      ImgUrl: '/Work/HomePage.png',
-      projectLink: 'https://sharwankunwar.github.io/Web-UI/',
-      sourceLink: 'https://github.com/SharwanKunwar/Web-UI',
-    },
-    {
-      title: 'CasinoPlanet',
-      description: 'CasinoPlanet is a web-based casino game with simple, fun gameplay. Built using HTML, CSS, and JavaScript, it offers a playful way to explore basic front-end development concepts.',
-      ImgUrl: '/Work/work05.png',
-      projectLink: 'https://sharwankunwar.github.io/Casino-online/',
-      sourceLink: 'https://github.com/SharwanKunwar/Casino-online',
-    },
-    {
-      title: 'Demo Digitalize Ideas',
-      description: 'Demo Digitalize Ideas is a concept project showcasing a modern, responsive landing page layout. It reflects creative design and layout skills using HTML, CSS, and responsive techniques.',
-      ImgUrl: '/Work/work06.png',
-      projectLink: 'https://sharwan-jung-kunwar.vercel.app/',
-      sourceLink: 'https://github.com/SharwanKunwar/Frontend-development/tree/main/FRONTEND-PRACTICE%20PAGES/web04',
-    },
+    
   ];
 
 

@@ -4,7 +4,7 @@ import {motion} from 'motion/react'
 import Image from 'next/image';
 
 
-function TailwindcssPage() {
+function LongProjects() {
 
     const [visibleOverlayIndex, setVisibleOverlayIndex] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
@@ -22,20 +22,41 @@ function TailwindcssPage() {
         setVisibleOverlayIndex((prev) => (prev === index ? null : index));
       };
 
-      // Scroll to top on mount
+       // Scroll to top on mount
         useEffect(() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }, []);
 
     const projects = [
+  
     {
-      title: 'Comming Soon',
-      description:'Tailwindcss custom components will be available soon.',
-      ImgUrl: '/computer.png',
-      projectLink: 'https://github.com/SharwanKunwar',
-      sourceLink: 'https://github.com/SharwanKunwar',
+      title: 'Personal Portfolio',
+      description:'A responsive and modern personal portfolio built with Next.js and Tailwind CSS, showcasing my projects, skills, and passion for full-stack development.',
+      ImgUrl: '/Work/work001.png',
+      projectLink: 'https://sharwan-jung-kunwar.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/Sharwan-Jung-Kunwar',
     },
-    
+    {
+      title: 'My Portfolio 07',
+      description: 'My Portfolio 07 is a personal website showcasing my projects, skills, and passion. With a clean design and smooth navigation, it highlights my work, tech stack, and contact information.',
+      ImgUrl: '/Work/work01.png',
+      projectLink: 'https://sharwankunwar.github.io/My-Portfolio-07/',
+      sourceLink: 'https://github.com/SharwanKunwar/My-Portfolio-07',
+    },
+    {
+      title: 'Programming Notes',
+      description: 'Programming Notes is a responsive web app that helps developers organize and access key concepts. Explore notes, syntax, and examples—all in one place. Built for simplicity and learning.',
+      ImgUrl: '/Work/work02.png',
+      projectLink: 'https://programming-notes-eight.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/Programming-Notes',
+    },
+    {
+      title: 'Home Page',
+      description: 'A responsive UI project built using Material UI and React. It showcases a modern design with clean layout and components, reflecting Google’s Material Design principles. #MaterialUI',
+      ImgUrl: '/Work/HomePage.png',
+      projectLink: 'https://sharwankunwar.github.io/Web-UI/',
+      sourceLink: 'https://github.com/SharwanKunwar/Web-UI',
+    }
   ];
 
 
@@ -109,4 +130,4 @@ function TailwindcssPage() {
   )
 }
 
-export default TailwindcssPage
+export default LongProjects

@@ -5,6 +5,7 @@ import TailwindcssPage from './TailwindcssPage';
 import MotionPage from './MotionPage';
 import R3F3DPage from './R3F3DPage';
 import DemoPage from './DemoPage';
+import LongProjects from './LongProjects';
 
 function DefaultPage() {
   // Scroll to top on mount
@@ -15,6 +16,12 @@ function DefaultPage() {
   return (
     <>
       <div>
+        {/* Long Projects */}
+        <p className=' text-md border border-black/30 font-bold  text-indigo-500 py-2 text-center'>Long Projects</p>
+        <div>
+          <LongProjects />
+        </div>
+
         {/* Landing page */}
         <p className=' text-md border border-black/30 font-bold  text-indigo-500 py-2 text-center'>Landing page</p>
         <div>

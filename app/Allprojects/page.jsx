@@ -8,6 +8,7 @@ import TailwindcssPage from './TailwindcssPage';
 import MotionPage from './MotionPage';
 import R3F3DPage from './R3F3DPage';
 import DemoPage from './DemoPage';
+import LongProjects from './LongProjects';
 
 function AllTypeProjects() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -16,10 +17,11 @@ function AllTypeProjects() {
     switch (selectedCategory) {
       case 'all':
         return <DefaultPage />;
+      case 'longProjects':
+        return <LongProjects />;
       case 'landing':
         return <LandingPages />;
       case 'tailwind':
-        
         return <TailwindcssPage />;
       case 'motion':
         return <MotionPage />;
@@ -47,6 +49,9 @@ function AllTypeProjects() {
           <button onClick={() => setSelectedCategory('all')} className={buttonStyle('all')}>
             All
           </button>
+          <button onClick={() => setSelectedCategory('longProjects')} className={buttonStyle('longProjects')}>
+            Long Projects
+          </button>
           <button onClick={() => setSelectedCategory('landing')} className={buttonStyle('landing')}>
             Landing
           </button>
@@ -59,9 +64,7 @@ function AllTypeProjects() {
           <button onClick={() => setSelectedCategory('3d')} className={buttonStyle('3d')}>
             3D
           </button>
-          <button onClick={() => setSelectedCategory('demo')} className={buttonStyle('demo')}>
-            Demo
-          </button>
+          
         </div>
 
         {/* Render selected projects */}
