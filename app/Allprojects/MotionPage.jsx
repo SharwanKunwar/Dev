@@ -29,12 +29,13 @@ function MotionPage() {
 
     const projects = [
     {
-      title: 'Comming Soon',
-      description:'...',
-      ImgUrl: '/computer.png',
-      projectLink: 'https://github.com/SharwanKunwar',
-      sourceLink: 'https://github.com/SharwanKunwar',
+      title: 'Loaders animation',
+      description:'A sleek and simple loaders animation built using Framer Motion, perfect for enhancing user experience with smooth, modern visuals.',
+      ImgUrl: '/Work/Loaders.png',
+      projectLink: 'https://loaders-motion.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/Loaders-Motion',
     },
+    
     
   ];
 
