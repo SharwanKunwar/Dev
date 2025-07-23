@@ -210,9 +210,67 @@ export default function Home() {
 
         </div>
 
-        <h1 className="mt-10 mb-3 text-2xl">Teck Stack</h1>
+        <h1 className="mt-10 mb-3 text-2xl">Teck Stack and Tools</h1>
         <div className=" md:w-full mastShadow rounded-md">
           <SkillsCard/>
+        </div>
+        {/* //////////////////////////////////// resume part /////////////////////////////////// */}
+        <br/><br/><br/>
+        <div className="flex justify-center p-2 border-t border-b border-black/30 text-3xl">Resume</div>
+        <p className="pt-3 text-center">Explore my journey through development projects and academic growth. This section highlights my work experience and education timeline, showcasing skills in both frontend and backend technologies including Java, Spring Boot, Android, and web development.</p>
+        <br /><br /><br />
+        <div className="flex flex-col gap-2">
+          <motion.h2 
+          initial={{y:10,opacity:0, filter:'blur(5px)'}}
+          whileInView={{y:0, opacity:1, filter:'none'}}
+          className="font-bold text-2xl">Work Experience</motion.h2>
+          <motion.p
+          initial={{y:20,opacity:0, filter:'blur(5px)'}}
+          whileInView={{y:0, opacity:1, filter:'none'}}
+          >Quick glance at my frontend and backend skills, real-world projects, and growth as a software developer.</motion.p>
+        </div>
+        <br /><br />
+        <div className=" flex md:flex-row flex-col gap-5 justify-between md:ml-0 pl-10 pt-5 relative">
+
+          <div className="absolute  w-5 left-0 top-0 rounded md:left-6/21 h-full flex justify-center items-center"> 
+          <div className="bg-black h-full w-1 ">
+            <motion.div
+            initial={{y:100, opacity:0, filter:"blur(1px)"}}
+            whileInView={{y:0, opacity:1, filter:"blur(0px)"}}
+            transition={{duration:0.3}}
+            className="bg-indigo-500 rounded-full w-5 h-5 absolute top-5.5 left-0"></motion.div>
+          </div>
+          </div>
+
+          <div className=" md:w-[50%]">
+            <motion.div
+            initial={{y:100, opacity:0, filter:"blur(3px)"}}
+            whileInView={{y:0, opacity:1, filter:"blur(0px)"}}
+            transition={{duration:0.3}}
+            >
+              <h1 className="font-bold text-[18px]">Frontend Development</h1>
+              <p className="text-indigo-500">July, 2025 - Current</p>
+            </motion.div>
+          </div>
+          <motion.div
+          initial={{y:100, opacity:0, filter:"blur(3px)"}}
+          whileInView={{y:0, opacity:1, filter:"blur(0px)"}}
+          transition={{duration:0.3}}
+          >
+            <div>
+              <h1 className="font-bold text-[18px]">JavaScript / Nextjs</h1>
+              <p className="text-[14px] mt-2 w-[90%]">I began my frontend journey with HTML, CSS and javaScript, building simple static pages. Later, i explored Nextjs, which transformed the way i build modern web interfaces.</p>
+              <p className="text-white mt-3 text-[13px]">I've Worked on several Frontent projects where i focused on:</p>
+              <ol className="list-disc ml-4 text-[14px] mt-2">
+                <li>Built with Next.js for server-side rendering and routing</li>
+                <li>Styled using Tailwind CSS for responsive design</li>
+                <li>Added smooth animations with Framer Motion</li>
+                <li>Used lucide-react and react-icons for consistent iconography</li>
+                <li>Implemented scroll-based navigation with active link highlighting</li>
+              </ol>
+
+            </div>
+          </motion.div>
         </div>
 
 

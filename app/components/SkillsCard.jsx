@@ -10,12 +10,12 @@ function SkillsCard() {
     { name: 'Html/CSS', level: 90 },
     { name: 'React', level: 60 },
     { name: 'Next.js', level: 50 },
-    { name: 'Node.js', level: 60 },
     { name: 'Tailwind CSS', level: 75 },
     { name: 'Motion', level: 60 },
     { name: 'React Three Fiber | 3D', level: 10},
     { name: 'Spring Boot', level: 0 },
     { name: 'PostgreSQL', level: 20 },
+    { name: 'git & gitHub', level: 70 },
 
   ];
 
