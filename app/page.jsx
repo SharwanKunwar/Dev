@@ -271,8 +271,8 @@ export default function Home() {
             <div>
               <h1 className="font-bold text-[18px]">JavaScript / Nextjs</h1>
               <p className="text-[14px] mt-2 w-[90%] text-neutral-500">I began my frontend journey with HTML, CSS and javaScript, building simple static pages. Later, i explored Nextjs, which transformed the way i build modern web interfaces.</p>
-              <p className="text-black font-bold mt-3 text-[13px]">I've Worked on several Frontent projects where i focused on:</p>
-              <ol className="list-disc ml-4 text-[14px] mt-2 text-neutral-500">
+              <p className="text-black font-bold mt-3 text-[14px]">I've Worked on several Frontent projects where i focused on:</p>
+              <ol className="list-disc ml-4 text-[13px] mt-2 text-neutral-500">
                 <li>Built with Next.js for server-side rendering and routing</li>
                 <li>Styled using Tailwind CSS for responsive design</li>
                 <li>Added smooth animations with Framer Motion</li>
@@ -380,7 +380,7 @@ export default function Home() {
           >
             <div className=" w-full">
               <h1 className="font-bold text-[18px] ">High School Diploma, Passed +2</h1>
-              <p className="pt-2 text-neutral-500">Graduated with a strong academic record. Engaged in extracurricular activities and clubs.</p>
+              <p className="pt-2 text-neutral-500 text-[14px]">Graduated with a strong academic record. Engaged in extracurricular activities and clubs.</p>
             </div>
           </motion.div>
         </div>
@@ -417,7 +417,7 @@ export default function Home() {
           >
             <div className=" w-full">
               <h1 className="font-bold text-[18px] ">Bachelor's Student BCA</h1>
-              <p className="pt-2 text-neutral-500">Currently pursuing a Bachelor's degree, i focus on academic growth and skill development through hands-on projects, coding club events, and tech meetups, while also dedicating time to online courses and personal projects.</p>
+              <p className="pt-2 text-neutral-500 text-[14px]">Currently pursuing a Bachelor's degree, i focus on academic growth and skill development through hands-on projects, coding club events, and tech meetups, while also dedicating time to online courses and personal projects.</p>
             </div>
           </motion.div>
         </div>
