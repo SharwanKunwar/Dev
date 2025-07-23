@@ -369,7 +369,7 @@ export default function Home() {
             transition={{duration:0.3}}
             >
               <h1 className="font-bold text-[18px]">DLMSS - KAILALI</h1>
-              <p className="text-indigo-500">Before 2025</p>
+              <p className="text-indigo-500">2076 - 2078</p>
             </motion.div>
           </div>
           <motion.div

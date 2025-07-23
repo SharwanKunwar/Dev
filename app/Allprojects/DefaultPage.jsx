@@ -4,7 +4,6 @@ import LandingPages from './LandingPages';
 import TailwindcssPage from './TailwindcssPage';
 import MotionPage from './MotionPage';
 import R3F3DPage from './R3F3DPage';
-import DemoPage from './DemoPage';
 import LongProjects from './LongProjects';
 
 function DefaultPage() {

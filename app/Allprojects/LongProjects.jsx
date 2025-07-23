@@ -56,7 +56,21 @@ function LongProjects() {
       ImgUrl: '/Work/HomePage.png',
       projectLink: 'https://sharwankunwar.github.io/Web-UI/',
       sourceLink: 'https://github.com/SharwanKunwar/Web-UI',
-    }
+    },
+     {
+      title: 'Todo App',
+      description: 'Todo App is a sleek and responsive task manager that lets users add, edit, and delete tasks with ease. It features clean UI, smooth interactions, and modern web technologies for a seamless experience.',
+      ImgUrl: '/Work/todo.png',
+      projectLink: 'https://progress-tracker-drab.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/Progress-Tracker',
+    },
+     {
+      title: 'Smart video player',
+      description: 'Smart Video Player is an intelligent video app that uses face tracking to play when the user is looking and pause when they look away. Built with react, tailwindCSS, and JavaScript for a smooth experience.',
+      ImgUrl: '/Work/SmartVideoPlayer.png',
+      projectLink: 'https://smart-video-player.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/SmartVideoPlayer',
+    },
   ];
 
 
