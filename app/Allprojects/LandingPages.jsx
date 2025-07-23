@@ -43,6 +43,13 @@ function LandingPages() {
       projectLink: 'https://sharwan-jung-kunwar.vercel.app/',
       sourceLink: 'https://github.com/SharwanKunwar/Frontend-development/tree/main/FRONTEND-PRACTICE%20PAGES/web04',
     },
+    {
+      title: 'The cars',
+      description: 'Demo car showroom landing page',
+      ImgUrl: '/Work/cars.png',
+      projectLink: 'https://sharwan-jung-kunwar.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/Frontend-development/tree/main/FRONTEND-PRACTICE%20PAGES/web04',
+    },
    
   ];
 
