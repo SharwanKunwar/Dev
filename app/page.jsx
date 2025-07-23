@@ -20,7 +20,7 @@ export default function Home() {
   const [more02, setMore02] = useState(false);
 
   return (
-    <div id="about" className="min-h-screen flex items-start justify-start">
+    <div id="home" className="min-h-screen flex items-start justify-start">
       <Container className="min-h-[200vh] p-4 md:p-10 md:pt-0">
       <div className="md:h-[50px] h-[25px]"></div>
         <motion.section
@@ -132,14 +132,20 @@ export default function Home() {
 
         {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         <div className="text-center my-10">
-          <h1>About</h1>
-          <section className=''>
+          <section id="about"  className=''>
             <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
             <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" strokeWidth="0.05"></path>
           </svg>
           </section>
-
         </div>
+
+        
+        <br /><br />
+        <div className="flex justify-center p-2 border-t border-b border-black/30 text-3xl">About</div>
+        <br /><br /><br />
+        
+        
+
         <div className=" md:flex-row flex-wrap flex flex-col-reverse  rounded-md mastShadow py-5">
           <div className="md:w-6/12 w-full  flex  justify-center items-center">
 
@@ -215,9 +221,11 @@ export default function Home() {
           <SkillsCard/>
         </div>
         {/* //////////////////////////////////// resume part /////////////////////////////////// */}
-        <br/><br/><br/>
-        <div className="flex justify-center p-2 border-t border-b border-black/30 text-3xl">Resume</div>
-        <p className="pt-3 text-center">Explore my journey through development projects and academic growth. This section highlights my work experience and education timeline, showcasing skills in both frontend and backend technologies including Java, Spring Boot, Android, and web development.</p>
+        <div id="education"></div>
+        <br/><br/><br/><br/>
+        <div id="education" className="flex justify-center p-2 border-t border-b border-black/30 text-3xl">Resume</div>
+        <p className="pt-4 md:block hidden text-center text-neutral-500">Explore my journey through development projects and academic growth. This section highlights my work experience and education timeline, showcasing skills in both frontend and backend technologies including Java, Spring Boot, Android, and web development.</p>
+        <p className="pt-4 md:hidden block text-center text-neutral-500">My journey in dev and education, with skills in Java, Spring Boot, Android & web.</p>
         <br /><br /><br />
         <div className="flex flex-col gap-2">
           <motion.h2 
@@ -227,6 +235,7 @@ export default function Home() {
           <motion.p
           initial={{y:20,opacity:0, filter:'blur(5px)'}}
           whileInView={{y:0, opacity:1, filter:'none'}}
+          className="text-neutral-500"
           >Quick glance at my frontend and backend skills, real-world projects, and growth as a software developer.</motion.p>
         </div>
         
@@ -261,9 +270,9 @@ export default function Home() {
           >
             <div>
               <h1 className="font-bold text-[18px]">JavaScript / Nextjs</h1>
-              <p className="text-[14px] mt-2 w-[90%]">I began my frontend journey with HTML, CSS and javaScript, building simple static pages. Later, i explored Nextjs, which transformed the way i build modern web interfaces.</p>
-              <p className="text-white mt-3 text-[13px]">I've Worked on several Frontent projects where i focused on:</p>
-              <ol className="list-disc ml-4 text-[14px] mt-2">
+              <p className="text-[14px] mt-2 w-[90%] text-neutral-500">I began my frontend journey with HTML, CSS and javaScript, building simple static pages. Later, i explored Nextjs, which transformed the way i build modern web interfaces.</p>
+              <p className="text-black font-bold mt-3 text-[13px]">I've Worked on several Frontent projects where i focused on:</p>
+              <ol className="list-disc ml-4 text-[14px] mt-2 text-neutral-500">
                 <li>Built with Next.js for server-side rendering and routing</li>
                 <li>Styled using Tailwind CSS for responsive design</li>
                 <li>Added smooth animations with Framer Motion</li>
@@ -306,9 +315,9 @@ export default function Home() {
           >
             <div className="md:pl-5">
               <h1 className="font-bold text-[18px]">C / Java and Other programming practices</h1>
-              <p className="text-[14px] mt-2 w-[90%]">I focused mainly on programming fundamentals using <strong>C</strong> and <strong>Java</strong>. I practiced problem-solving, logic building, and core concepts like <strong>DSA</strong>, with diving into frontend or backend frameworks.</p>
-              <p className="text-white mt-3 text-[13px]">I've worked on several projects:</p>
-              <ol className="list-disc ml-4 text-[14px] mt-2">
+              <p className="text-[14px] mt-2 w-[90%] text-neutral-500">I focused mainly on programming fundamentals using <strong>C</strong> and <strong>Java</strong>. I practiced problem-solving, logic building, and core concepts like <strong>DSA</strong>, with diving into frontend or backend frameworks.</p>
+              <p className="text-black font-bold mt-3 text-[13px]">I've worked on several projects:</p>
+              <ol className="list-disc ml-4 text-[14px] mt-2 text-neutral-500">
                 <li>Library management system</li>
                 <li>Encryption and Decryption</li>
                 <li>Condition based Ai 'lucifer'</li>
@@ -334,7 +343,9 @@ export default function Home() {
           <motion.p
           initial={{y:20,opacity:0, filter:'blur(5px)'}}
           whileInView={{y:0, opacity:1, filter:'none'}}
-          >An overview of my academic journey, highlighting my qualifications, coursework and skills gained to support my professional growth.</motion.p>
+          className="text-neutral-500"
+          >
+            An overview of my academic journey, highlighting my qualifications, coursework and skills gained to support my professional growth.</motion.p>
         </div>
         
         {/* edu01 */}
@@ -369,10 +380,7 @@ export default function Home() {
           >
             <div className=" w-full">
               <h1 className="font-bold text-[18px] ">High School Diploma, Passed +2</h1>
-              <p className="pt-2">Graduated with a strong academic record. Engaged in extracurricular activities and clubs.</p>
-              
-              
-
+              <p className="pt-2 text-neutral-500">Graduated with a strong academic record. Engaged in extracurricular activities and clubs.</p>
             </div>
           </motion.div>
         </div>
@@ -409,15 +417,10 @@ export default function Home() {
           >
             <div className=" w-full">
               <h1 className="font-bold text-[18px] ">Bachelor's Student BCA</h1>
-              <p className="pt-2">Currently pursuing a Bachelor's degree, i focus on academic growth and skill development through hands-on projects, coding club events, and tech meetups, while also dedicating time to online courses and personal projects.</p>
-              
-              
-
+              <p className="pt-2 text-neutral-500">Currently pursuing a Bachelor's degree, i focus on academic growth and skill development through hands-on projects, coding club events, and tech meetups, while also dedicating time to online courses and personal projects.</p>
             </div>
           </motion.div>
         </div>
-
-        
 
       </Container>
 

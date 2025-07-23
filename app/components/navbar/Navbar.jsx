@@ -26,7 +26,7 @@ export default function Navbar() {
   });
 
   const navItems = [
-    { title: 'About', url: '/', hash: '/', type: 'anchor' },
+    { title: 'about', url: '/', hash: '#about', type: 'anchor' },
     { title: 'Projects', url: '/', hash: '#projects', type: 'anchor' },
     { title: 'Education', url: '/', hash: '#education', type: 'anchor' },
     { title: 'Contact', url: '/contact', type: 'route' },
