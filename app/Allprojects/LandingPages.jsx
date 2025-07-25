@@ -50,6 +50,13 @@ function LandingPages() {
       projectLink: 'https://sharwan-jung-kunwar.vercel.app/',
       sourceLink: 'https://github.com/SharwanKunwar/Frontend-development/tree/main/FRONTEND-PRACTICE%20PAGES/web04',
     },
+    {
+      title: 'Traval CheckPoint',
+      description: 'Demo Trival site. build using motion, tailwindcss',
+      ImgUrl: '/Work/travel.png',
+      projectLink: 'https://travel-check-point.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/Travel-checkPoint',
+    },
    
   ];
 
