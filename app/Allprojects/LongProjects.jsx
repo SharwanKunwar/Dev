@@ -71,6 +71,13 @@ function LongProjects() {
       projectLink: 'https://smart-video-player.vercel.app/',
       sourceLink: 'https://github.com/SharwanKunwar/SmartVideoPlayer',
     },
+     {
+      title: 'Portfolio Design',
+      description: 'Live and source code will updated soon..',
+      ImgUrl: '/Work/portfolio.png',
+      projectLink: 'https://smart-video-player.vercel.app/',
+      sourceLink: 'https://github.com/SharwanKunwar/SmartVideoPlayer',
+    },
   ];
 
 
