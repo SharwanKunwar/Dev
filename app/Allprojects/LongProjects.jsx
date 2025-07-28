@@ -73,7 +73,7 @@ function LongProjects() {
     },
      {
       title: 'Portfolio Design',
-      description: 'Live and source code will updated soon..',
+      description: 'A modern portfolio site showcasing frontend skills, design, and live deployment on Vercel. only for big screen',
       ImgUrl: '/Work/portfolio.png',
       projectLink: 'https://portfolio-design-dusky.vercel.app/',
       sourceLink: 'https://github.com/SharwanKunwar/Portfolio-Design',
